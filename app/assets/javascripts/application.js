@@ -10,7 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require activestorage
-//= require turbolinks
-//= require_tree .
+//= require ./client/jquery.min
+//= require ./client/jquery-migrate.min
+//= require ./client/popper.min
+//= require ./client/bootstrap.min
+//= require_tree ./client/vendor
+//= require ./client/hs.core
+//= require_tree ./client/components
