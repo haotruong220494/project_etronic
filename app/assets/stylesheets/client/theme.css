@@ -33901,21 +33901,6 @@ blockquote:not(.blockquote) p {
   margin-top: 4px;
 }
 
-.breadcrumb-item + .breadcrumb-item a {
-  padding: 0.438rem 0.875rem;
-  background-color: transparent;
-  border-radius: 0.313rem;
-}
-
-@media (min-width: 768px) {
-  .breadcrumb-item + .breadcrumb-item a {
-    background-color: #f5f5f5;
-  }
-  .breadcrumb-item + .breadcrumb-item a:hover {
-    background-color: #e8e8e8;
-  }
-}
-
 /*------------------------------------
   Card
 ------------------------------------*/
