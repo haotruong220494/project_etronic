@@ -3,4 +3,10 @@ class ClientsController < ApplicationController
 
   def home
   end
+
+  def detail
+  end
+
+  def category
+  end
 end
