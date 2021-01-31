@@ -1,0 +1,7 @@
+vi:
+  clients: 
+    home_page:
+  layouts:
+    client: 
+      header:
+        header_welcome: "Chào mừng bạn đến với Electronics Store"

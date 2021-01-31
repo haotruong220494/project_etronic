@@ -1,0 +1,98 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <a href="#" class="brand-link">
+    <img src="<%= asset_path("AdminLTELogo.png")%>" class="brand-image img-circle elevation-3">
+    <span class="brand-text font-weight-light" id="submit-data-trend-project">Admin Page</span>
+  </a>
+
+  <div class="sidebar">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image" id="submit-data-export-rdb">
+        <img src="<%= asset_path("avatar5.png")%>" class="img-circle elevation-2">
+      </div>
+      <div class="info">
+        <a href="<%= admin_root_path %>" class="d-block"><%= current_admin_admin.email %></a>
+      </div>
+    </div>
+
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+          </a>
+          <%= link_to admin_root_path, class: "nav-link" do %>
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Dashboards
+              <!-- <span class="right badge badge-danger">New</span> -->
+            </p>
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "", class: "nav-link" do %>
+            <i class="fas fa-shopping-cart"></i>
+            <p>
+              Đơn Hàng
+              <i class="fas fa-angle-left right"></i>
+             <span class="badge badge-danger right">10<%#= Category.all.size %></span>
+            </p>
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to admin_collections_path, class: "nav-link" do %>
+            <i class="nav-icon fas fa-list-alt"></i>
+            <p>
+              Danh mục sản phẩm
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right"><%= Collection.all.size %></span>
+            </p>
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "", class: "nav-link" do %>
+            <i class="nav-icon fas fa-clock"></i>
+            <p>
+              Sản Phẩm
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">10<%#= Post.all.size %></span>
+            </p>
+          <% end %>
+        </li>
+        
+        <li class="nav-item">
+          <%= link_to "", class: "nav-link" do %>
+            <i class="nav-icon fas fas fa-clipboard-list"></i>
+            <p>
+              Danh Mục Bài viết
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">10<%#= Post.all.size %></span>
+            </p>
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "", class: "nav-link" do %>
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Bài viết
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">10<%#= Post.all.size %></span>
+            </p>
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "", class: "nav-link" do %>
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Khách Hàng
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-success right">10<%#= Account.all.size %></span>
+            </p>
+          <% end %>
+        </li> 
+      </ul>
+    </nav>
+  </div>
+</aside>

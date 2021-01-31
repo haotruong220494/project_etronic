@@ -1,0 +1,67 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Dashboard v2</h1>
+      </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="<%= admin_root_path %>">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard v2</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+          <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-shopping-cart"></i></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Đơn Hàng</span>
+            <span class="info-box-number">10<%#= Category.all.size %></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box">
+          <span class="info-box-icon bg-info elevation-1"><i class="fas fa-list-alt"></i></span>
+          <div class="info-box-content">
+            <span class="info-box-text">Danh Mục Sản Phẩm</span>
+            <span class="info-box-number">10
+              <%#= Post.all.size %>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix hidden-md-up"></div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+          <span class="info-box-icon bg-success elevation-1"><i class="fas fa-clock"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">Sản Phẩm</span>
+            <span class="info-box-number">10<%#= Account.all.size %></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box mb-3">
+          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+
+          <div class="info-box-content">
+            <span class="info-box-text">Khách Hàng</span>
+            <span class="info-box-number">10<%#= Author.all.size %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
