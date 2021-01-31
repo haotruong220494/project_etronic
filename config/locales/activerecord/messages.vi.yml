@@ -1,0 +1,38 @@
+vi:
+  activerecord:
+    errors: &errors
+      format: "%{attribute} %{message}."
+      messages:
+        blank: "%{attribute} không thể bỏ trống."
+        wrong_format: "%{attribute} có định dạng không chính xác."
+        taken: "%{attribute} đã được đăng ký."
+        invalid: "%{attribute} không chính xác."
+        too_short: "%{attribute} cần tối thiểu %{count} ký tự."
+        not_an_integer: "Hãy nhập %{attribute} bằng số nguyên dương."
+        not_a_number: "Hãy nhập %{attribute} bằng số."
+        value_greater_than: "%{attribute} phải lớn hơn %{with}."
+        other_than: "Phải lớn hơn %{count}."
+        less_than_or_equal_to: "%{attribute} phải nhỏ hơn hoặc bằng %{count}."
+        less_than: "%{attribute} phải nhỏ hơn %{count}."
+        too_long: "Hãy nhập %{attribute} nhỏ hơn hoặc bằng %{count} kí tự."
+        greater_than_or_equal_to: "%{attribute} phải lớn hơn hoặc bằng %{count}."
+        only_apartment: "Không thể tạo nhiều product thuộc cùng một căn hộ."
+        duplicate_date: "Ngày áp dụng bị trùng."
+        greater_than: "%{attribute} phải lớn hơn %{count}."
+        invalid_token_format: "%{attribute} chỉ cho phép ký tự chữ, số, và dấu gạch dưới"
+        deposit_before_refund: "Phải tạo task thu tiền cọc trước."
+        duplicate_deposit: "Không thể tạo nhiều task thu tiền cọc trên 1 đơn đặt phòng"
+        duplicate_refund: "Không thể tạo nhiều task trả tiền cọc trên 1 đơn đặt phòng"
+        lastest_checkout_date: "Ngày kết thúc không thể nhỏ hơn ngày checkout đơn đặt phòng"
+        active_apartment: "Căn hộ đã đi vào hoạt động, không thể sửa ngày bắt đầu"
+        must_less_than_price: "%{attribute} phải nhỏ hơn %{time} %{monthly_attr}."
+  activemodel:
+    errors: &errors
+      format: "%{attribute} %{message}"
+      messages:
+        blank: "%{attribute} không thể bỏ trống."
+        wrong_format: "%{attribute} có định dạng không chính xác."
+        taken: "%{attribute} đã được đăng ký."
+        invalid: "%{attribute} không chính xác."
+        too_short: "%{attribute} cần tối thiểu %{count} ký tự."
+        too_long: "Hãy nhập %{attribute} nhỏ hơn hoặc bằng %{count} kí tự."

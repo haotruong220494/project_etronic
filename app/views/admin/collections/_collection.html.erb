@@ -1,0 +1,12 @@
+<tr>
+  <td style="width: 45%"></i><%= collection.title %></td>
+  <td style="width: 45%"></i><%= collection.slug %></td>
+  <td class="action-article" style="width: 10%;">
+    <%= link_to edit_admin_collection_path(collection) do %>
+      <%= content_tag :i, "", class: "far fa-edit text-info" %>
+    <% end %>
+    <%= link_to admin_collection_path(collection), method: :delete, data: { confirm: "You sure?" } do %>
+      <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+    <% end %>
+  </td>
+</tr>

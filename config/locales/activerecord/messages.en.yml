@@ -1,0 +1,39 @@
+en:
+  activerecord:
+    errors: &errors
+      format: "%{attribute} %{message}"
+      messages:
+        blank: "%{attribute} can't be empty"
+        wrong_format: "The %{attribute} format is incorrect"
+        taken: "%{attribute} has already been taken"
+        invalid: "%{attribute} is invalid"
+        too_short: "%{attribute} is too short (minimum is %{count} characters)"
+        not_an_integer: "Please enter %{attribute} with integers"
+        not_a_number: "Please enter %{attribute} with numbers"
+        value_greater_than: "%{attribute} must be greater than %{with}."
+        other_than: "must be other than %{count}."
+        less_than_or_equal_to: "%{attribute} must be less than or equal to %{count}."
+        less_than: "%{attribute} must be less than %{count}."
+        too_long: "Please enter %{attribute} with %{count} characters or less."
+        greater_than_or_equal_to: "%{attribute} must be greater than or equal to %{count}."
+        only_apartment: "Cannot create multiple products belonging to the same Stay."
+        duplicate_date: "Apply date is duplicated."
+        greater_than: "%{attribute} must be greater %{count}."
+        invalid_token_format: "%{attribute} must be characters, numbers, and underline"
+        deposit_before_refund: "Collect deposit task must be created first"
+        duplicate_deposit: "Cannot create multiple collect deposit tasks belonging to the same reservation"
+        duplicate_refund: "Cannot create multiple refund tasks belonging to the same reservation"
+        purchase_reservation: "Reservation has been purchased or cancelled"
+        lastest_checkout_date: "The end date cannot be less than the checkout date of the booking"
+        active_apartment: "The apartment has been in operation, cannot change the start date"
+        must_less_than_price: "%{attribute} must be less than %{time} times %{monthly_attr}."
+  activemodel:
+    errors: &errors
+      format: "%{attribute} %{message}"
+      messages:
+        blank: "%{attribute} can't be empty"
+        wrong_format: "The %{attribute} format is incorrect"
+        taken: "%{attribute} has already been taken"
+        invalid: "%{attribute} is invalid"
+        too_short: "%{attribute} is too short (minimum is %{count} characters)"
+        too_long: "Please enter %{attribute} with %{count} characters or less."
