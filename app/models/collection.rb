@@ -1,10 +1,13 @@
 class Collection < ApplicationRecord
-	ATTRS = [:title, :slug]
+	ATTRS = [:title, :slug, :location, :image]
+
+  has_one :image
+  has_one_attached :image
 
 	validates :title, :slug, presence: true
   before_save :to_slug
 
-  scope :cate_show, ->(type) { where location: type }
+  scope :location, ->(type) { where location: type }
 
   def to_param
     "#{to_slug}#{id}"

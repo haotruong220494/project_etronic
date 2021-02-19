@@ -3,7 +3,7 @@ class Admin::CollectionsController < Admin::BaseController
 
   def index
     @q = Collection.ransack params[:q]
-    @collections = @q.result.page(params[:page]).per Settings.per_page.default
+    @collections = @q.result.page(params[:page]).order(created_at: :desc).per Settings.per_page.default
   end
 
   def new
@@ -26,7 +26,7 @@ class Admin::CollectionsController < Admin::BaseController
   def update
     if @collection.update_attributes params_collection
       flash[:success] = "Cập nhận danh mục thành công."
-      redirect_to admin_collections_path
+      redirect_to admin_collections_path(page: params[:page])
     else
       render "edit"
     end
@@ -38,6 +38,12 @@ class Admin::CollectionsController < Admin::BaseController
     redirect_to admin_collections_path
   end
 
+  def delete_image_attachment
+    @image = ActiveStorage::Attachment.find(params[:id])
+    @image.purge_later
+    redirect_back(fallback_location: request.referer)
+  end
+
   private
   def load_collection
     @collection = Collection.find_by_id(params[:id].delete("^0-9").to_i)
@@ -46,4 +52,4 @@ class Admin::CollectionsController < Admin::BaseController
   def params_collection
     params.require(:collection).permit Collection::ATTRS
   end
-end	
+end
