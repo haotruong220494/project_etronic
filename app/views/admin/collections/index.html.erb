@@ -4,7 +4,7 @@
 
 <%= render "layouts/breadcrumb_admin"%>
 <div class="col-12 pt-3">
-  <%= page_entries_info @collections, entry_name: 'sản phẩm' %>
+  <%= page_entries_info @collections, entry_name: 'danh mục sản phẩm' %>
   <div class="card">
     <div class="card-header">
       <h3 class="card-title"><i class="fas fa-list"></i>&ensp;Toàn bộ danh mục sản phẩm</h3>
@@ -37,6 +37,6 @@
         </tbody>
       </table>
     </div>
-  </div>  
+  </div>
   <%= paginate @collections, outer_window: 3 %>
 </div>
