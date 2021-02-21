@@ -1,0 +1,46 @@
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, admin_root_path %>
+<%= content_for :breadcum_second, "Tất cả sản phẩm" %>
+
+<%= render "layouts/breadcrumb_admin"%>
+<div class="col-12 pt-3">
+  <%= page_entries_info @products, entry_name: 'sản phẩm' %>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title"><i class="fas fa-list"></i>&ensp;Toàn bộ sản phẩm</h3>
+      <%= link_to new_admin_product_path, class: "create-category" do %>
+        <i class="far fa-plus-square nav-icon"></i>
+      <% end %>
+      <div class="card-tools">
+        <%= search_form_for @q, url: admin_products_path do |f| %>
+          <div class="input-group input-group-sm">
+            <%= f.search_field :name_cont, class: "form-control float-right", placeholder: "VD: GA-2000" %>
+            <div class="input-group-append">
+              <%= f.submit "Tìm kiếm", class: "button btn btn-default" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0">
+      <table class="table table-hover text-nowrap">
+        <thead>
+          <tr>
+            <th scope="col">Tiêu đề</th>
+            <th scope="col">Đường dẫn</th>
+            <th scope="col">Giá bán</th>
+            <th scope="col">Giá khuyến mãi</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Đã bán</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @products %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= paginate @products, outer_window: 3 %>
+</div>

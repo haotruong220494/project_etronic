@@ -1,5 +1,5 @@
 per_page:
-  default: 3
+  default: 13
   client: 5
 date:
   formats: "%d/%m/%Y"

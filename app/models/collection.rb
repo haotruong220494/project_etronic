@@ -1,6 +1,7 @@
 class Collection < ApplicationRecord
 	ATTRS = [:title, :slug, :location, :image]
 
+  has_many :products, dependent: :destroy
   has_one :image
   has_one_attached :image
 

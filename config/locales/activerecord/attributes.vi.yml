@@ -1,0 +1,13 @@
+vi:
+  activerecord:
+    attributes:
+      product:
+        name: Tên sản phẩm
+        slug: Đường dẫn sản phẩm (url)
+        collection_id: Danh mục 
+        image: Ảnh đại diện (416*420)
+        description: Mô tả sản phẩm
+        price: Giá sản phẩm
+        promotional_price: Giá khuyến mãi
+        quantity: Số lượng
+        status: Trạng thái hiển thị

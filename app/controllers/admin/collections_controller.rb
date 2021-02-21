@@ -1,4 +1,6 @@
 class Admin::CollectionsController < Admin::BaseController
+  include Response
+
   before_action :load_collection, only: [:edit, :update]
 
   def index
@@ -33,7 +35,7 @@ class Admin::CollectionsController < Admin::BaseController
   end
 
   def destroy
-    Collection.find_by_id(params[:id].delete("^0-9").to_i).destroy
+    Collection.find_by_id(response_id(params[:id])).destroy
     flash[:success] = "Xóa danh mục mục thành công."
     redirect_to admin_collections_path
   end
@@ -46,7 +48,7 @@ class Admin::CollectionsController < Admin::BaseController
 
   private
   def load_collection
-    @collection = Collection.find_by_id(params[:id].delete("^0-9").to_i)
+    @collection = Collection.find_by_id(response_id(params[:id]))
   end
 
   def params_collection

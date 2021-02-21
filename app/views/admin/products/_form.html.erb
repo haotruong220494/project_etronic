@@ -1,0 +1,112 @@
+<div class="card card-secondary form-article">
+  <div class="card-header">
+    <h3 class="card-title"> <%= yield(:form_type) %> </h3>
+  </div>
+  <div class="card-body">
+    <%= simple_form_for [:admin, @product], html: {class: "form-horizontal"}  do |f| %>
+      <input type="hidden" name="page" value="<%= params[:page].presence || 1 %>">
+      <div class="form-body">
+        <div class="form-group">
+        	<%= f.label :name, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :name, as: :string,
+              input_html: { class: "form-control input-circle input-title", placeholder: "Ví dụ: Đồng hồ GA-2000 1A1" },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group slug-group">
+          <%= f.label :slug, class: "col-md-4 control-label" %>
+          <div class="row">
+            <div class="col-md-11">
+              <%= f.input :slug, as: :string,
+                input_html: { class: "form-control input-circle input-slug", placeholder: "dong-ho-ga-2000-1a1" },
+                label: false,
+                autofocus: true %>
+            </div>
+            <div class="col-md-1">
+              <button type="button" class="btn btn-outline-secondary change-slug">Tạo url</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+             <%= f.cktext_area :description, class: "form-control input-circle" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :price, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :price, as: :integer,
+              input_html: { class: "form-control input-circle input-title", placeholder: "12000000" },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :promotional_price, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :promotional_price, as: :integer,
+              input_html: { class: "form-control input-circle input-title", placeholder: "12000000" },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :quantity, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :quantity, as: :integer,
+              input_html: { class: "form-control input-circle input-title", placeholder: "100" },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
+         <div class="form-group">
+          <%= f.label :quantity_sold, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :quantity_sold, as: :integer,
+              input_html: { class: "form-control input-circle input-title", placeholder: "100" },
+              label: false,
+              autofocus: true, disabled: true %>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <%= f.label :collection_id, class: "control-label" %>
+            <%= f.collection_select :collection_id, Collection.all, :id, :title, {}, {class: "custom-select"} %>
+          </div>
+        </div>
+        <div class="form-group custom-file mb-3">
+          <div class="row">
+            <%= f.label :image, class: "control-label" %>
+            <% if @product.image.attached? %>
+              <div class="image-cover col-md-12">
+                <img src="<%= (url_for(@product.image)) %>">
+                <%= link_to 'Remove before change', delete_image_attachment_admin_product_url(@product.image.id),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+              </div>
+            <% else %>
+              <div class="col-md-12">
+                <div>
+                  <%= f.file_field :image, accept: ".jpg,.jpeg,.gif,.png", class: "custom-file-input", id: "customFile" %>
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :status, class: "col-md-2 control-label" %>
+          <%= f.input_field :status, as: :boolean %>
+        </div>
+        <div class="form-actions">
+          <div class="col-md-12">
+            <%= f.submit yield(:button_text)  , class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

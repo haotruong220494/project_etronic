@@ -1,0 +1,22 @@
+<tr>
+  <td style="width: 25%"><%= product.name %></td>
+  <td style="width: 15%"><%= product.slug %></td>
+  <td style="width: 15%"><%= product.price %></td>
+  <td style="width: 15%">
+    <% if product.promotional_price.present? %>
+      <%= product.promotional_price %>
+    <% else %>
+      không có
+    <% end %>
+  </td>
+  <td style="width: 15%"><%= product.quantity %></td>
+  <td style="width: 15%"><%= product.quantity_sold %></td>
+  <td class="action-article" style="width: 10%;">
+    <%= link_to edit_admin_product_path(product, page: params["page"]) do %>
+      <%= content_tag :i, "", class: "far fa-edit text-info" %>
+    <% end %>
+    <%= link_to admin_product_path(product), method: :delete, data: { confirm: "You sure?" } do %>
+      <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+    <% end %>
+  </td>
+</tr>
