@@ -1,0 +1,6 @@
+vi:
+  admin:
+    articles:
+      article:
+        'true': 'Hiện'
+        'false': 'Ẩn'

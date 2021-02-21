@@ -90,12 +90,13 @@
                             <h6 class="mb-3 font-weight-bold">BELLO LÊ THÁI TỔ</h6>
                             <!-- List Group -->
                             <ul class="list-group list-group-flush list-group-borderless mb-0 list-group-transparent">
-                                <li><a class="list-group-item list-group-item-action" href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-5-column-sidebar.html">G-SHOCK</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-5-column-sidebar.html">BABY-G</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-5-column-sidebar.html">CASIO</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-5-column-sidebar.html">EDIFICE</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-5-column-sidebar.html">SRWATCH</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-5-column-sidebar.html">ĐỒNG HỒ THÔNG MINH</a></li>
+                                <% Collection.all.each do |collection| %>
+                                  <li>
+                                    <%= link_to "", class: "list-group-item list-group-item-action" do %>
+                                      <%= collection.title %>
+                                    <% end %>
+                                  </li>
+                                <% end %>
                             </ul>
                             <!-- End List Group -->
                         </div>

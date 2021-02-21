@@ -1,0 +1,13 @@
+<tr>
+  <td style="width: 25%"><%= article.title %></td>
+  <td style="width: 15%"><%= article.slug %></td>
+  <td style="width: 15%"><%= t(".#{article.status}") %></td>
+  <td class="action-article" style="width: 10%;">
+    <%= link_to edit_admin_article_path(article, page: params["page"]) do %>
+      <%= content_tag :i, "", class: "far fa-edit text-info" %>
+    <% end %>
+    <%= link_to admin_article_path(article), method: :delete, data: { confirm: "You sure?" } do %>
+      <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+    <% end %>
+  </td>
+</tr>

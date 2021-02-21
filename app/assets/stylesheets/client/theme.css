@@ -8305,6 +8305,7 @@ a.badge-indigo:focus, a.badge-indigo.focus {
 .list-group-flush:last-child .list-group-item:last-child {
   margin-bottom: 0;
   border-bottom: 0;
+  text-transform: uppercase;
 }
 
 .list-group-item-primary {
