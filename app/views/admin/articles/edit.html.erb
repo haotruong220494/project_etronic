@@ -1,0 +1,12 @@
+<% provide :button_text, "Cập nhật" %>
+<% provide :form_type, "Form cập nhật" %>
+
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, admin_root_path %>
+<%= content_for :breadcum_second, "Tất cả bài viết" %>
+<%= content_for :breadcum_second_link, admin_articles_path %>
+<%= content_for :breadcum_third, @article.title %>
+<%= content_for :sub_breadcum_item, "Thay đổi" %>
+
+<%= render "layouts/breadcrumb_admin"%>
+<%= render "form" %>

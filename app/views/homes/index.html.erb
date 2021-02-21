@@ -111,90 +111,7 @@
     <!-- End Slider Section -->
     <div class="container">
         <!-- Banner -->
-        <div class="mb-5">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-xl-0 col-xl-3">
-                    <a href="https://transvelo.github.io/electro-html/2.0/html/shop/shop.html" class="d-black text-gray-90">
-                        <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
-                            <div class="col-6 col-xl-5 col-wd-6 pr-0">
-                                <img class="img-fluid" src="http://via.placeholder.com/190X150" alt="Image Description">
-                            </div>
-                            <div class="col-6 col-xl-7 col-wd-6">
-                                <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                    PHÁT HIỆN LỖI <strong>1 ĐỔI 1</strong>
-                                </div>
-                                <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                    Xem thêm
-                                    <span class="link__icon ml-1">
-                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4 mb-xl-0 col-xl-3">
-                    <a href="https://transvelo.github.io/electro-html/2.0/html/shop/shop.html" class="d-black text-gray-90">
-                        <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
-                            <div class="col-6 col-xl-5 col-wd-6 pr-0">
-                                <img class="img-fluid" src="http://via.placeholder.com/190X150" alt="Image Description">
-                            </div>
-                            <div class="col-6 col-xl-7 col-wd-6">
-                                <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                    CHẾ ĐỘ BẢO HÀNH <strong>24/7</strong>
-                                </div>
-                                <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                    Xem thêm
-                                    <span class="link__icon ml-1">
-                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4 mb-xl-0 col-xl-3">
-                    <a href="https://transvelo.github.io/electro-html/2.0/html/shop/shop.html" class="d-black text-gray-90">
-                        <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
-                            <div class="col-6 col-xl-5 col-wd-6 pr-0">
-                                <img class="img-fluid" src="http://via.placeholder.com/190X150" alt="Image Description">
-                            </div>
-                            <div class="col-6 col-xl-7 col-wd-6">
-                                <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                <strong>MIỄN PHÍ</strong> VẬN CHUYỂN
-                                </div>
-                                <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                    Xem thêm
-                                    <span class="link__icon ml-1">
-                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 mb-4 mb-xl-0 col-xl-3">
-                    <a href="https://transvelo.github.io/electro-html/2.0/html/shop/shop.html" class="d-black text-gray-90">
-                        <div class="min-height-132 py-1 d-flex bg-gray-1 align-items-center">
-                            <div class="col-6 col-xl-5 col-wd-6 pr-0">
-                                <img class="img-fluid" src="http://via.placeholder.com/190X150" alt="Image Description">
-                            </div>
-                            <div class="col-6 col-xl-7 col-wd-6">
-                                <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                    TRẢ GÓP <strong>0 %</strong>
-                                </div>
-                                <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                    Xem thêm
-                                    <span class="link__icon ml-1">
-                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <%= render "homes/blog" %>
         <!-- End Banner -->
         <!-- Deals-and-tabs -->
         <div class="mb-5">
@@ -854,7 +771,7 @@
         <!-- Full banner -->
         <div class="mb-6">
             <a href="" class="d-block text-gray-90">
-                <div class="" style="background-image: url(<%= asset_path('super-sale-banner-up-70-off-sale-banner.jpg')%>); background-size: contain;">
+                <div class="" style="background-image: url(<%= asset_path('super-sale-banner-up-70-off-sale-banner.jpg')%>); background-size: contain; background-position: 86%;">
                     <div class="space-top-2-md p-4 pt-6 pt-md-8 pt-lg-6 pt-xl-8 pb-lg-4 px-xl-8 px-lg-6">
                         <div class="flex-horizontal-center mt-lg-3 mt-xl-0 overflow-auto overflow-md-visble">
                             <h1 class="text-lh-38 font-size-32 font-weight-light mb-0 flex-shrink-0 flex-md-shrink-1" style="background: rgba(255, 165, 0, .6);">ĐÓN CHỜ <strong>SIÊU KHUYẾN MÃI</strong> TRONG THÁNG 2 NÀY</h1>

@@ -11,3 +11,9 @@ vi:
         promotional_price: Giá khuyến mãi
         quantity: Số lượng
         status: Trạng thái hiển thị
+      article: 
+        title: Tên bài viết
+        slug: Đường dẫn bài viết (url)
+        image: Ảnh đại diện (149*117)
+        description: Mô tả bài viết
+        status: Trạng thái hiển thị

@@ -1,0 +1,43 @@
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, admin_root_path %>
+<%= content_for :breadcum_second, "Tất cả bài viết" %>
+
+<%= render "layouts/breadcrumb_admin"%>
+<div class="col-12 pt-3">
+  <%= page_entries_info @articles, entry_name: 'bài viết' %>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title"><i class="fas fa-list"></i>&ensp;Toàn bộ bài viết</h3>
+      <%= link_to new_admin_article_path, class: "create-category" do %>
+        <i class="far fa-plus-square nav-icon"></i>
+      <% end %>
+      <div class="card-tools">
+        <%= search_form_for @q, url: admin_articles_path do |f| %>
+          <div class="input-group input-group-sm">
+            <%= f.search_field :title_cont, class: "form-control float-right", placeholder: "VD: Chế độ bảo hành" %>
+            <div class="input-group-append">
+              <%= f.submit "Tìm kiếm", class: "button btn btn-default" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0">
+      <table class="table table-hover text-nowrap">
+        <thead>
+          <tr>
+            <th scope="col">Tiêu đề</th>
+            <th scope="col">Đường dẫn</th>
+            <th scope="col">Trạng thái</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @articles %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= paginate @articles, outer_window: 3 %>
+</div>

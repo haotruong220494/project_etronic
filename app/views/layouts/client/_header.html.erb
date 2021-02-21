@@ -244,7 +244,7 @@
                                       <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space hs-menu-initialized">
                                           <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
                                               <ul class="navbar-nav u-header__navbar-nav">
-                                                  <% @collections_main.each do |collection|%>
+                                                  <% @collections_main&.each do |collection|%>
                                                     <li class="nav-item u-header__nav-item"
                                                         data-event="hover"
                                                         data-position="left">

@@ -1,0 +1,10 @@
+<% provide :button_text, "Tạo mới" %>
+<% provide :form_type, "Form Tạo" %>
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, admin_root_path %>
+<%= content_for :breadcum_second, "Tất cả bài viết" %>
+<%= content_for :breadcum_second_link, admin_articles_path %>
+<%= content_for :breadcum_third, "Tạo bài viết" %>
+
+<%= render "layouts/breadcrumb_admin"%>
+<%= render "form" %>

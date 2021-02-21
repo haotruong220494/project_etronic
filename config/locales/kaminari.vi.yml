@@ -11,7 +11,7 @@ vi:
       one_page:
         display_entries:
           zero: "Không có %{entry_name} nào"
-          one: "Hiển có <b>1</b> %{entry_name}"
+          one: "Hiện có <b>1</b> %{entry_name}"
           other: "Có tất cả<b> %{count}</b> %{entry_name}"
       more_pages:
-        display_entries: "Hiển có từ <b>%{first} đến %{last}</b> trong tổng số <b>%{total}</b> %{entry_name}"
+        display_entries: "Hiện có từ <b>%{first} đến %{last}</b> trong tổng số <b>%{total}</b> %{entry_name}"
