@@ -3,10 +3,10 @@
 
 <%= content_for :breadcum_first, "Trang chủ" %>
 <%= content_for :breadcum_first_link, admin_root_path %>
-<%= content_for :breadcum_second, "Danh mục sản phẩm" %>
-<%= content_for :breadcum_second_link, admin_collections_path %>
-<%= content_for :breadcum_third, @collection.title %>
-<%= content_for :sub_breadcum_item, "Sửa đổi danh mục" %>
+<%= content_for :breadcum_second, "Tất cả sản phẩm" %>
+<%= content_for :breadcum_second_link, admin_products_path %>
+<%= content_for :breadcum_third, @product.name %>
+<%= content_for :sub_breadcum_item, "Thay đổi" %>
 
 <%= render "layouts/breadcrumb_admin"%>
 <%= render "form" %>
