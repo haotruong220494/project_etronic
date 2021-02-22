@@ -1,0 +1,68 @@
+<div class="col-md-auto mb-6 mb-md-0">
+  <div class="p-3 border border-width-2 border-primary borders-radius-20 bg-white min-width-370">
+    <div class="d-flex justify-content-between align-items-center m-1 ml-2">
+      <h2 class="font-size-28 mb-0 font-weight-normal text-lh-28 max-width-120"><strong>Đặc biệt</strong></h2>
+      <div class="d-flex align-items-center flex-column justify-content-center bg-primary rounded-pill height-75 width-75 text-lh-1">
+        <span class="font-size-12">giảm</span>
+        <div class="font-size-20 font-weight-bold">2 triệu</div>
+        <span class="font-size-12">đồng</span>
+      </div>
+    </div>
+    <div class="mb-4">
+      <a href="<%= product_path(@product_especially) %>" class="d-block text-center">
+        <%= image_tag(@product_especially.image, class: "img-fluid w-320", alt: "image #{@product_especially.name}") %>
+      </a>
+    </div>
+    <h5 class="mb-2 font-size-14 text-center mx-auto max-width-180 text-lh-18">
+      <a href="" class="text-blue font-weight-bold">
+        <%= @product_especially.name %>
+      </a>
+    </h5>
+    <div class="d-flex align-items-center justify-content-center mb-3">
+      <% if @product_especially.promotional_price.present? %>
+        <del class="font-size-18 mr-2 text-gray-2"><%= number_with_delimiter(@product_especially.promotional_price ) %>đ</del>
+        <ins class="font-size-30 text-red text-decoration-none"><%= number_with_delimiter(@product_especially.price ) %>đ</ins>
+      <% else %>
+        <div class="text-red"><%= number_with_delimiter(@product_especially.price ) %>đ</div>
+      <% end %>
+    </div>
+    <div class="mb-3 mx-2">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="">đã bán: <strong><%= @product_especially.quantity_sold %></strong></span>
+        <span class="">Còn lại: <strong><%= inventory(@product_especially) %></strong></span>
+      </div>
+      <div class="rounded-pill bg-gray-3 height-20 position-relative">
+        <span class="position-absolute left-0 top-0 bottom-0 rounded-pill bg-primary" style="width: <%= percent_product_sold(@product_especially) %>%"></span>
+      </div>
+    </div>
+    <div class="mb-2">
+      <h6 class="font-size-15 text-gray-2 text-center mb-3">Nhanh tay số lượng có hạn:</h6>
+      <div class="js-countdown d-flex justify-content-center"
+        data-end-date="2021/04/30"
+        data-hours-format="%H"
+        data-minutes-format="%M"
+        data-seconds-format="%S">
+        <div class="text-lh-1">
+          <div class="text-gray-2 font-size-30 bg-gray-4 py-2 px-2 rounded-sm mb-2">
+            <span class="js-cd-hours"></span>
+          </div>
+          <div class="text-gray-2 font-size-12 text-center">Giờ</div>
+        </div>
+        <div class="mx-1 pt-1 text-gray-2 font-size-24">:</div>
+        <div class="text-lh-1">
+          <div class="text-gray-2 font-size-30 bg-gray-4 py-2 px-2 rounded-sm mb-2">
+            <span class="js-cd-minutes"></span>
+          </div>
+          <div class="text-gray-2 font-size-12 text-center">Phút</div>
+        </div>
+        <div class="mx-1 pt-1 text-gray-2 font-size-24">:</div>
+        <div class="text-lh-1">
+          <div class="text-gray-2 font-size-30 bg-gray-4 py-2 px-2 rounded-sm mb-2">
+            <span class="js-cd-seconds"></span>
+          </div>
+          <div class="text-gray-2 font-size-12 text-center">giây</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

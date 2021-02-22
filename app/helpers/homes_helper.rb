@@ -6,4 +6,13 @@ module HomesHelper
 			"-#{percent}%"
 		end
 	end
-end	
+
+  def inventory product
+    product.quantity - product.quantity_sold
+  end
+
+  def percent_product_sold product
+    percent_product_sold = (product.quantity_sold.to_f / product.quantity.to_f) * 100
+    percent_product_sold.to_i
+  end
+end

@@ -39,18 +39,18 @@
 			                        </h5>
 			                        <div class="mb-2">
 			                          <a href="" class="d-block text-center">
-			                          	<img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description">
+                                  <%= image_tag(product.image, class: "img-fluid", alt: "image #{product.name}") %>
 			                          </a>
 			                        </div>
 			                        <div class="flex-center-between mb-1">
 			                          <div class="prodcut-price position-relative">
 			                          	<% if product.promotional_price.present? %>
-			                          		<del class="font-size-12 position-absolute tex-gray-6 bottom-100"><%= number_with_delimiter(product.price ) %> vnđ</del> 
+			                          		<del class="font-size-12 position-absolute tex-gray-6 bottom-100"><%= number_with_delimiter(product.price ) %> vnđ</del>
 			                          		<span class="font-size-16 text-red position-absolute tex-gray-6 bottom-100 right-0"><%= sale_off(product) %></span>
 			                          		<div class="text-red"><%= number_with_delimiter(product.promotional_price ) %> vnđ</div>
 			                          	<% else %>
 			                          		<div class="text-red"><%= number_with_delimiter(product.price ) %> vnđ</div>
-			                          	<% end %>	
+			                          	<% end %>
 			                          </div>
 			                          <div class="d-none d-xl-block prodcut-add-cart">
 			                            <a href="" class="btn-add-cart btn-primary transition-3d-hover">

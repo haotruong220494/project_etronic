@@ -1,842 +1,96 @@
 <main id="content" role="main">
-    <!-- Slider Section -->
+  <!-- Slider Section -->
+  <%= render "homes/slider" %>
+  <!-- End Slider Section -->
+  <div class="container">
+    <!-- Bài viết -->
+    <%= render "homes/blog" %>
     <div class="mb-5">
-        <div class="bg-img-hero" style="background-image: url(<%= asset_path('banner-colection.jpg')%>)">
-            <div class="container min-height-420 overflow-hidden">
-                <div class="js-slick-carousel u-slick"
-                    data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start mb-3 mb-md-4 offset-xl-3 pl-2 pb-1">
-                    <div class="js-slide bg-img-hero-center">
-                        <div class="row min-height-420 py-7 py-md-0">
-                            <div class="offset-xl-3 col-xl-4 col-6 mt-md-8">
-                                <h1 class="font-size-64 text-lh-57 font-weight-light"
-                                    data-scs-animation-in="fadeInUp">
-                                    GIẢM GIÁ <span class="d-block font-size-55">CỰC SỐC </span>
-                                </h1>
-                                <h6 class="font-size-15 font-weight-bold mb-3"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="200">ĐỒNG HỒ CASIO G-SHOCK NAM MTG-B2000D-1A
-                                </h6>
-                                <div class="mb-4"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="300">
-                                     <span class="font-size-13">Giá chỉ</span>
-                                    <div class="font-size-30 font-weight-bold text-red">
-                                        30,000,000<sup>Vnđ</sup>
-                                    </div>
-                                    <div class="font-size-20 font-weight-bold">
-                                        <del>30,000,000<sup>Vnđ</sup></del>
-                                    </div>
-                                </div>
-                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="400">
-                                    Mua ngay
-                                </a>
-                            </div>
-                            <div class="col-xl-5 col-6  d-flex align-items-center"
-                                data-scs-animation-in="zoomIn"
-                                data-scs-animation-delay="500">
-                                <img class="img-fluid" src="http://via.placeholder.com/416X420" alt="Image Description">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="js-slide bg-img-hero-center" data-animation-delay="0">
-                        <div class="row min-height-420 py-7 py-md-0">
-                            <div class="offset-xl-3 col-xl-4 col-6 mt-md-8">
-                                <h1 class="font-size-64 text-lh-57 font-weight-light"
-                                    data-scs-animation-in="fadeInUp">
-                                    <span class="d-block font-size-55">MỚI VỀ</span>
-                                </h1>
-                                <h6 class="font-size-15 font-weight-bold mb-3"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="200">ĐỒNG HỒ CASIO G-SHOCK NAM GA-2100-1A1
-                                </h6>
-                                <div class="mb-4"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="300">
-                                    <span class="font-size-13">Giá chỉ</span>
-                                    <div class="font-size-30 font-weight-bold text-red">
-                                        2,450,000<sup>Vnđ</sup>
-                                    </div>
-                                </div>
-                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="400">
-                                    Mua ngay
-                                </a>
-                            </div>
-                            <div class="col-xl-5 col-6  d-flex align-items-center"
-                                data-scs-animation-in="fadeInUp"
-                                data-scs-animation-delay="500">
-                                <img class="img-fluid" src="http://via.placeholder.com/416X420" alt="Image Description">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="js-slide bg-img-hero-center" data-animation-delay="0">
-                        <div class="row min-height-420 py-7 py-md-0">
-                            <div class="offset-xl-3 col-xl-4 col-6 mt-md-8">
-                                <h1 class="font-size-64 text-lh-57 font-weight-light"
-                                    data-scs-animation-in="fadeInUp">
-                                    <span class="d-block font-size-55">LỊCH LÃM</span>
-                                </h1>
-                                <h6 class="font-size-15 font-weight-bold mb-3"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="200">ĐỒNG HỒ CASIO EDIFICE EQS-800BCD-2AVUDF
-                                </h6>
-                                <div class="mb-4"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="300">
-                                    <span class="font-size-13">Giá chỉ</span>
-                                    <div class="font-size-50 text-red font-weight-bold text-lh-45">
-                                        4,850,000<sup>Vnđ</sup>
-                                    </div>
-                                </div>
-                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-15"
-                                    data-scs-animation-in="fadeInUp"
-                                    data-scs-animation-delay="400">
-                                    Start Buying
-                                </a>
-                            </div>
-                            <div class="col-xl-5 col-6  d-flex align-items-center"
-                                data-scs-animation-in="fadeInRight"
-                                data-scs-animation-delay="500">
-                                <img class="img-fluid" src="http://via.placeholder.com/416X420" alt="Image Description">
-                            </div>
-                        </div>
+      <div class="row">
+        <!-- Sản Phẩm đặc biệt  -->
+        <% if @product_especially.present? %>
+          <%= render "homes/product_especially" %>
+        <% end %>
+        <%= render "homes/product_tab_collection_sale" %>
+      </div>
+    </div>
+
+  </div>
+  <!-- Tab sản phẩm -->
+  <%= render "homes/product_tab_collection_main" %>
+  <div class="container">
+    <!-- Prodcut-cards-carousel -->
+    <%= render "homes/product_selling" %>
+    <!-- End Prodcut-cards-carousel -->
+    <!-- Full banner -->
+    <div class="mb-6">
+        <a href="" class="d-block text-gray-90">
+            <div class="" style="background-image: url(<%= asset_path('super-sale-banner-up-70-off-sale-banner.jpg')%>); background-size: contain; background-position: 86%;">
+                <div class="space-top-2-md p-4 pt-6 pt-md-8 pt-lg-6 pt-xl-8 pb-lg-4 px-xl-8 px-lg-6">
+                    <div class="flex-horizontal-center mt-lg-3 mt-xl-0 overflow-auto overflow-md-visble">
+                        <h1 class="text-lh-38 font-size-32 font-weight-light mb-0 flex-shrink-0 flex-md-shrink-1" style="background: rgba(255, 165, 0, .6);">ĐÓN CHỜ <strong>SIÊU KHUYẾN MÃI</strong> TRONG THÁNG 2 NÀY</h1>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
-    <!-- End Slider Section -->
-    <div class="container">
-        <!-- Banner -->
-        <%= render "homes/blog" %>
-        <!-- End Banner -->
-        <!-- Deals-and-tabs -->
-        <div class="mb-5">
-            <div class="row">
-                <!-- Deal -->
-                <div class="col-md-auto mb-6 mb-md-0">
-                    <div class="p-3 border border-width-2 border-primary borders-radius-20 bg-white min-width-370">
-                        <div class="d-flex justify-content-between align-items-center m-1 ml-2">
-                            <h2 class="font-size-28 mb-0 font-weight-normal text-lh-28 max-width-120"><strong>Đặc biệt</strong></h2>
-                            <div class="d-flex align-items-center flex-column justify-content-center bg-primary rounded-pill height-75 width-75 text-lh-1">
-                                <span class="font-size-12">giảm</span>
-                                <div class="font-size-20 font-weight-bold">2 triệu</div>
-                                <span class="font-size-12">đồng</span>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/320X300" alt="Image Description"></a>
-                        </div>
-                        <h5 class="mb-2 font-size-14 text-center mx-auto max-width-180 text-lh-18"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GA-2110ET-2A</a></h5>
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <del class="font-size-18 mr-2 text-gray-2">5,149,000₫</del>
-                            <ins class="font-size-30 text-red text-decoration-none">3,194,000₫</ins>
-                        </div>
-                        <div class="mb-3 mx-2">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <span class="">đã bán: <strong>6</strong></span>
-                                <span class="">Còn lại: <strong>28</strong></span>
-                            </div>
-                            <div class="rounded-pill bg-gray-3 height-20 position-relative">
-                                <span class="position-absolute left-0 top-0 bottom-0 rounded-pill w-30 bg-primary"></span>
-                            </div>
-                        </div>
-                        <div class="mb-2">
-                            <h6 class="font-size-15 text-gray-2 text-center mb-3">Nhanh tay số lượng có hạn:</h6>
-                            <div class="js-countdown d-flex justify-content-center"
-                                data-end-date="2021/01/30"
-                                data-hours-format="%H"
-                                data-minutes-format="%M"
-                                data-seconds-format="%S">
-                                <div class="text-lh-1">
-                                    <div class="text-gray-2 font-size-30 bg-gray-4 py-2 px-2 rounded-sm mb-2">
-                                        <span class="js-cd-hours"></span>
-                                    </div>
-                                    <div class="text-gray-2 font-size-12 text-center">Giờ</div>
-                                </div>
-                                <div class="mx-1 pt-1 text-gray-2 font-size-24">:</div>
-                                <div class="text-lh-1">
-                                    <div class="text-gray-2 font-size-30 bg-gray-4 py-2 px-2 rounded-sm mb-2">
-                                        <span class="js-cd-minutes"></span>
-                                    </div>
-                                    <div class="text-gray-2 font-size-12 text-center">Phút</div>
-                                </div>
-                                <div class="mx-1 pt-1 text-gray-2 font-size-24">:</div>
-                                <div class="text-lh-1">
-                                    <div class="text-gray-2 font-size-30 bg-gray-4 py-2 px-2 rounded-sm mb-2">
-                                        <span class="js-cd-seconds"></span>
-                                    </div>
-                                    <div class="text-gray-2 font-size-12 text-center">giây</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Deal -->
-                <!-- Tab Prodcut -->
-                <div class="col">
-                    <!-- Features Section -->
-                    <div class="">
-                        <!-- Nav Classic -->
-                        <div class="position-relative bg-white text-center z-index-2">
-                            <ul class="nav nav-classic nav-tab justify-content-center" id="pills-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active " id="pills-one-example1-tab" data-toggle="pill" href="#pills-one-example1" role="tab" aria-controls="pills-one-example1" aria-selected="true">
-                                        <div class="d-md-flex justify-content-md-center align-items-md-center">
-                                            Giảm giá
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " id="pills-two-example1-tab" data-toggle="pill" href="#pills-two-example1" role="tab" aria-controls="pills-two-example1" aria-selected="false">
-                                        <div class="d-md-flex justify-content-md-center align-items-md-center">
-                                            Mới nhập về
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End Nav Classic -->
-
-                        <!-- Tab Content -->
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade pt-2 show active" id="pills-one-example1" role="tabpanel" aria-labelledby="pills-one-example1-tab">
-                                <ul class="row list-unstyled products-group no-gutters">
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                            <del class="font-size-12 tex-gray-6 position-absolute bottom-100">2,599,000 đ</del>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade pt-2" id="pills-two-example1" role="tabpanel" aria-labelledby="pills-two-example1-tab">
-                                <ul class="row list-unstyled products-group no-gutters">
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">1,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-6 col-wd-3 col-md-4 product-item">
-                                        <div class="product-item__outer h-100">
-                                            <div class="product-item__inner px-xl-4 p-3">
-                                                <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">G-SHOCK</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Đồng hồ Casio G-Shock Nam GST-B300WLP</a></h5>
-                                                    <div class="mb-2">
-                                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="d-block text-center"><img class="img-fluid" src="http://via.placeholder.com/212X200" alt="Image Description"></a>
-                                                    </div>
-                                                    <div class="flex-center-between mb-1">
-                                                        <div class="prodcut-price d-flex align-items-center flex-wrap position-relative">
-                                                            <ins class="font-size-20 text-red text-decoration-none mr-2">3,999,000 đ</ins>
-                                                        </div>
-                                                        <div class="d-none d-xl-block prodcut-add-cart">
-                                                            <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- End Tab Content -->
-                    </div>
-                    <!-- End Features Section -->
-                </div>
-                <!-- End Tab Prodcut -->
-            </div>
-        </div>
-        <!-- End Deals-and-tabs -->
-    </div>
-    <!-- Products-4-1-4 -->
-
-    <%= render "homes/product_tab_collection_main" %>
-    <!-- End Products-4-1-4 -->
-    <div class="container">
-        <!-- Prodcut-cards-carousel -->
-        <div class="space-top-1">
-            <dv class=" d-flex justify-content-between border-bottom border-color-1 flex-md-nowrap flex-wrap border-sm-bottom-0">
-                <h3 class="section-title mb-0 pb-2 font-size-22">Sản Phẩm Bán Chạy</h3>
-            </dv>
-            <div class="pt-3 pb-6">
+    <div class="mb-8">
+        <div class="py-2 border-top border-bottom">
+            <div class="js-slick-carousel u-slick my-1"
+                data-slides-show="5"
+                data-slides-scroll="1"
+                data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-normal u-slick__arrow-centered--y"
+                data-arrow-left-classes="fa fa-angle-left u-slick__arrow-classic-inner--left z-index-9"
+                data-arrow-right-classes="fa fa-angle-right u-slick__arrow-classic-inner--right"
+                data-responsive='[{
+                    "breakpoint": 992,
+                    "settings": {
+                        "slidesToShow": 2
+                    }
+                }, {
+                    "breakpoint": 768,
+                    "settings": {
+                        "slidesToShow": 1
+                    }
+                }, {
+                    "breakpoint": 554,
+                    "settings": {
+                        "slidesToShow": 1
+                    }
+                }]'>
                 <div class="js-slide">
-                    <ul class="row list-unstyled products-group no-gutters mb-0 overflow-visible">
-
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-wd-3 col-md-4 product-item product-item__card d-none d-wd-block pb-2 mb-2 pb-md-0 mb-md-0 border-bottom border-md-bottom-0 remove-divider-wd">
-                            <div class="product-item__outer h-100">
-                                <div class="product-item__inner p-md-3 row no-gutters">
-                                    <div class="col col-lg-auto product-media-left">
-                                        <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="max-width-150 d-block"><img class="img-fluid" src="http://via.placeholder.com/150X140" alt="Image Description"></a>
-                                    </div>
-                                    <div class="col product-item__body pl-2 pl-lg-3 mr-xl-2 mr-wd-1">
-                                        <div class="mb-4">
-                                            <div class="mb-2"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/product-categories-7-column-full-width.html" class="font-size-12 text-gray-5">Cameras</a></div>
-                                            <h5 class="product-item__title"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="text-blue font-weight-bold">Purple NX Mini F1 aparat  SMART NX</a></h5>
-                                        </div>
-                                        <div class="flex-center-between mb-3">
-                                            <div class="prodcut-price">
-                                                <div class="text-gray-100">$559.00</div>
-                                            </div>
-                                            <div class="d-none d-xl-block prodcut-add-cart">
-                                                <a href="https://transvelo.github.io/electro-html/2.0/html/shop/single-product-fullwidth.html" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <a href="#" class="link-hover__brand">
+                        <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
+                    </a>
+                </div>
+                <div class="js-slide">
+                    <a href="#" class="link-hover__brand">
+                        <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
+                    </a>
+                </div>
+                <div class="js-slide">
+                    <a href="#" class="link-hover__brand">
+                        <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
+                    </a>
+                </div>
+                <div class="js-slide">
+                    <a href="#" class="link-hover__brand">
+                        <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
+                    </a>
+                </div>
+                <div class="js-slide">
+                    <a href="#" class="link-hover__brand">
+                        <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
+                    </a>
+                </div>
+                <div class="js-slide">
+                    <a href="#" class="link-hover__brand">
+                        <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- End Prodcut-cards-carousel -->
-        <!-- Full banner -->
-        <div class="mb-6">
-            <a href="" class="d-block text-gray-90">
-                <div class="" style="background-image: url(<%= asset_path('super-sale-banner-up-70-off-sale-banner.jpg')%>); background-size: contain; background-position: 86%;">
-                    <div class="space-top-2-md p-4 pt-6 pt-md-8 pt-lg-6 pt-xl-8 pb-lg-4 px-xl-8 px-lg-6">
-                        <div class="flex-horizontal-center mt-lg-3 mt-xl-0 overflow-auto overflow-md-visble">
-                            <h1 class="text-lh-38 font-size-32 font-weight-light mb-0 flex-shrink-0 flex-md-shrink-1" style="background: rgba(255, 165, 0, .6);">ĐÓN CHỜ <strong>SIÊU KHUYẾN MÃI</strong> TRONG THÁNG 2 NÀY</h1>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="mb-8">
-            <div class="py-2 border-top border-bottom">
-                <div class="js-slick-carousel u-slick my-1"
-                    data-slides-show="5"
-                    data-slides-scroll="1"
-                    data-arrows-classes="d-none d-lg-inline-block u-slick__arrow-normal u-slick__arrow-centered--y"
-                    data-arrow-left-classes="fa fa-angle-left u-slick__arrow-classic-inner--left z-index-9"
-                    data-arrow-right-classes="fa fa-angle-right u-slick__arrow-classic-inner--right"
-                    data-responsive='[{
-                        "breakpoint": 992,
-                        "settings": {
-                            "slidesToShow": 2
-                        }
-                    }, {
-                        "breakpoint": 768,
-                        "settings": {
-                            "slidesToShow": 1
-                        }
-                    }, {
-                        "breakpoint": 554,
-                        "settings": {
-                            "slidesToShow": 1
-                        }
-                    }]'>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
-                        </a>
-                    </div>
-                    <div class="js-slide">
-                        <a href="#" class="link-hover__brand">
-                            <img class="img-fluid m-auto max-height-50" src="http://via.placeholder.com/200X60" alt="Image Description">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Brand Carousel -->
     </div>
+    <!-- End Brand Carousel -->
+  </div>
 </main>
