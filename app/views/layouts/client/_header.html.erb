@@ -12,7 +12,7 @@
                           <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border u-header-topbar__nav-item-no-border u-header-topbar__nav-item-border-single">
                               <div class="d-flex align-items-center">
                                   <!-- Language -->
-                                  <div class="position-relative">
+                                  <!-- <div class="position-relative">
                                       <a id="languageDropdownInvoker" class="dropdown-nav-link dropdown-toggle d-flex align-items-center u-header-topbar__nav-link font-weight-normal" href="javascript:;" role="button"
                                           aria-controls="languageDropdown"
                                           aria-haspopup="true"
@@ -27,12 +27,12 @@
                                           data-unfold-animation-out="fadeOut">
                                           <span class="d-inline-block d-sm-none">US</span>
                                           <span class="d-none d-sm-inline-flex align-items-center"><i class="ec ec-map-pointer mr-1"></i>Ngôn Ngữ</span>
-                                      </a>
+                                      </a> -->
 
-                                      <div id="languageDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="languageDropdownInvoker">
+                                      <!-- <div id="languageDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="languageDropdownInvoker">
                                           <a class="dropdown-item active" href="#">Việt Nam</a>
                                           <a class="dropdown-item" href="#">English</a>
-                                      </div>
+                                      </div> -->
                                   </div>
                                   <!-- End Language -->
                               </div>
@@ -50,7 +50,7 @@
                                   data-unfold-animation-in="fadeInRight"
                                   data-unfold-animation-out="fadeOutRight"
                                   data-unfold-duration="500">
-                                  <i class="ec ec-user mr-1"></i> Đăng kí <span class="text-gray-50">hoặc</span> Đăng nhập
+                                  <i class="ec ec-user mr-1"></i> Đăng ký <span class="text-gray-50"> hoặc </span> Đăng nhập
                               </a>
                               <!-- End Account Sidebar Toggle Button -->
                           </li>
@@ -237,7 +237,7 @@
                                       <span class="pl-1 text-gray-90">Danh mục sản phẩm</span>
                                   </button>
                               </div>
-                              <div id="basicsCollapseOne" class="collapse show vertical-menu"
+                              <div id="basicsCollapseOne" class="collapse vertical-menu <%= 'show' if controller_name == "homes" %>"
                                   aria-labelledby="basicsHeadingOne"
                                   data-parent="#basicsAccordion">
                                   <div class="card-body p-0">

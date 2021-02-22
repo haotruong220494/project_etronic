@@ -1,1 +1,55 @@
-show.html.erb
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, root_path %>
+<%= content_for :breadcum_second, "Bello Blog" %>
+<%= content_for :breadcum_third, @article.title %>
+
+<main id="content" role="main">
+  <!-- breadcrumb -->
+  <div class="bg-gray-13 bg-md-transparent">
+    <div class="container">
+      <!-- breadcrumb -->
+      <div class="my-md-3">
+        <%= render "layouts/breadcrumb" %>
+      </div>
+      <!-- End breadcrumb -->
+    </div>
+  </div>
+  <!-- End breadcrumb -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 col-wd">
+        <div class="min-width-1100-wd">
+          <article class="card mb-8 border-0">
+            <div class="card-body pb-0 px-0 pt-0">
+              <div class="d-block d-md-flex flex-center-between mb-4 mb-md-0">
+                <h2 class="mb-md-3 mb-1"><%= @article.title %></h2>
+              </div>
+              <div class="mb-3 pb-3 border-bottom">
+                <div class="list-group list-group-horizontal flex-wrap list-group-borderless align-items-center mx-n0dot5">
+                  <span class="mx-0dot5 text-gray-5"><%= @article.created_at %></a>
+                </div>
+              </div>
+              <div>
+                <%= raw @article.description %>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="col-xl-3 col-wd">
+        <aside class="mb-7">
+          <div class="border-bottom border-color-1 mb-5">
+            <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">Bello blog</h3>
+          </div>
+          <p class="text-gray-90 mb-0">
+            <h6 class="text-black">Thương hiệu đồng hồ G-shock</h6>
+            <p>- Thương hiệu của Nhật Bản.</p>
+            <p>- Ra mắt vào năm 1983.</p>
+            <p>- G-Shock là một dòng đồng hồ của Casio, đại diện cho một dòng sản phẩm không thể phá hủy ở mọi tác động. Sự ra đời của G-Shock ngay lập tức được công nhận và trở thành một chiếc đồng hồ phổ biến rộng rãi với doanh thu khổng lồ trong đầu những năm 1990. Kể từ đó, đồng hồ G-Shosck ngày càng phát triển theo thời gian.</p>
+          </p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>

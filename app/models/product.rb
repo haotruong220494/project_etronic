@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-	ATTRS = [:name, :slug, :image, :description, :price, :promotional_price, :quantity, :photo_id, :collection_id, :status]
+	ATTRS = [:name, :slug, :image, :description, :price, :promotional_price, :quantity,
+    :collection_id, :status, :sale_off, :especially]
 
 	has_one :image
   has_one_attached :image

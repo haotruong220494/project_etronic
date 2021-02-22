@@ -101,6 +101,14 @@
           <%= f.label :status, class: "col-md-2 control-label" %>
           <%= f.input_field :status, as: :boolean %>
         </div>
+        <div class="form-group">
+          <%= f.label :sale_off, class: "col-md-2 control-label" %>
+          <%= f.input_field :sale_off, as: :boolean %>
+        </div>
+        <div class="form-group">
+          <%= f.label :especially, class: "col-md-2 control-label" %>
+          <%= f.input_field :especially, as: :boolean %>
+        </div>
         <div class="form-actions">
           <div class="col-md-12">
             <%= f.submit yield(:button_text)  , class: "btn btn-primary" %>

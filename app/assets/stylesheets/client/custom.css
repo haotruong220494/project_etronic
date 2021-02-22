@@ -17,3 +17,15 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #333
 }
+
+.w-320 {
+  width: 320px;
+}
+
+.w-275 {
+  width: 275px;
+}
+
+p {
+  margin-bottom: 0.5rem !important;
+}
