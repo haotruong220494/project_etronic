@@ -54,5 +54,4 @@ class Admin::ProductsController < Admin::BaseController
   def params_product
     params.require(:product).permit Product::ATTRS
   end
-
 end

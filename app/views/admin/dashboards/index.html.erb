@@ -22,7 +22,7 @@
           <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-shopping-cart"></i></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Đơn Hàng</span>
-            <span class="info-box-number">10<%#= Category.all.size %></span>
+            <span class="info-box-number">0<%#= Collection.all.size %></span>
           </div>
         </div>
       </div>
@@ -32,8 +32,8 @@
           <span class="info-box-icon bg-info elevation-1"><i class="fas fa-list-alt"></i></span>
           <div class="info-box-content">
             <span class="info-box-text">Danh Mục Sản Phẩm</span>
-            <span class="info-box-number">10
-              <%#= Post.all.size %>
+            <span class="info-box-number">
+              <%= Collection.all.size %>
             </span>
           </div>
         </div>
@@ -47,7 +47,7 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Sản Phẩm</span>
-            <span class="info-box-number">10<%#= Account.all.size %></span>
+            <span class="info-box-number"><%= Product.all.size %></span>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
 
           <div class="info-box-content">
             <span class="info-box-text">Khách Hàng</span>
-            <span class="info-box-number">10<%#= Author.all.size %></span>
+            <span class="info-box-number">0<%#= Author.all.size %></span>
           </div>
         </div>
       </div>

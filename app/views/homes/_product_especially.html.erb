@@ -14,14 +14,14 @@
       </a>
     </div>
     <h5 class="mb-2 font-size-14 text-center mx-auto max-width-180 text-lh-18">
-      <a href="" class="text-blue font-weight-bold">
-        <%= @product_especially.name %>
-      </a>
+      <%= link_to product_path(@product_especially), class: "text-blue font-weight-bold" do %>
+        <%=  @product_especially.name %>
+      <% end %>
     </h5>
     <div class="d-flex align-items-center justify-content-center mb-3">
       <% if @product_especially.promotional_price.present? %>
-        <del class="font-size-18 mr-2 text-gray-2"><%= number_with_delimiter(@product_especially.promotional_price ) %>đ</del>
-        <ins class="font-size-30 text-red text-decoration-none"><%= number_with_delimiter(@product_especially.price ) %>đ</ins>
+        <del class="font-size-18 mr-2 text-gray-2"><%= number_with_delimiter(@product_especially.price ) %>đ</del>
+        <ins class="font-size-30 text-red text-decoration-none"><%= number_with_delimiter(@product_especially.promotional_price ) %>đ</ins>
       <% else %>
         <div class="text-red"><%= number_with_delimiter(@product_especially.price ) %>đ</div>
       <% end %>

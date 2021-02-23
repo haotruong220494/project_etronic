@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  if Rails.env.development?
+    require "resque/server"
+    mount Resque::Server.new, at: "/resque"
+  end
+
   mount Ckeditor::Engine => "/ckeditor"
   namespace :admin do
     devise_for :admins, :path => "", :path_names => { :sign_in => "login", :sign_out => "logout" },
@@ -21,6 +26,15 @@ Rails.application.routes.draw do
     end
   end
 
+  devise_for :accounts, path: "", path_names: { sign_in: "login", sign_out: "logout", sign_up: "registration", edit: "account/edit" },
+    controllers: {
+      sessions: "sessions",
+      passwords: "passwords",
+      registrations: "registrations",
+      confirmations: "confirmations"
+    }
+
+  resources :accounts, only: [:show, :edit, :update], param: :slug
   root "homes#index"
   # get "/detail", to: "clients#detail"
   # get "/category", to: "clients#category"

@@ -9,51 +9,24 @@
                   </div>
                   <div class="topbar-right ml-auto">
                       <ul class="list-inline mb-0 d-flex align-items-center">
-                          <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border u-header-topbar__nav-item-no-border u-header-topbar__nav-item-border-single">
-                              <div class="d-flex align-items-center">
-                                  <!-- Language -->
-                                  <!-- <div class="position-relative">
-                                      <a id="languageDropdownInvoker" class="dropdown-nav-link dropdown-toggle d-flex align-items-center u-header-topbar__nav-link font-weight-normal" href="javascript:;" role="button"
-                                          aria-controls="languageDropdown"
-                                          aria-haspopup="true"
-                                          aria-expanded="false"
-                                          data-unfold-event="hover"
-                                          data-unfold-target="#languageDropdown"
-                                          data-unfold-type="css-animation"
-                                          data-unfold-duration="300"
-                                          data-unfold-delay="300"
-                                          data-unfold-hide-on-scroll="true"
-                                          data-unfold-animation-in="slideInUp"
-                                          data-unfold-animation-out="fadeOut">
-                                          <span class="d-inline-block d-sm-none">US</span>
-                                          <span class="d-none d-sm-inline-flex align-items-center"><i class="ec ec-map-pointer mr-1"></i>Ngôn Ngữ</span>
-                                      </a> -->
-
-                                      <!-- <div id="languageDropdown" class="dropdown-menu dropdown-unfold" aria-labelledby="languageDropdownInvoker">
-                                          <a class="dropdown-item active" href="#">Việt Nam</a>
-                                          <a class="dropdown-item" href="#">English</a>
-                                      </div> -->
-                                  </div>
-                                  <!-- End Language -->
-                              </div>
-                          </li>
-                          <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                              <!-- Account Sidebar Toggle Button -->
-                              <a id="sidebarNavToggler" href="javascript:;" role="button" class="u-header-topbar__nav-link"
-                                  aria-controls="sidebarContent"
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                  data-unfold-event="click"
-                                  data-unfold-hide-on-scroll="false"
-                                  data-unfold-target="#sidebarContent"
-                                  data-unfold-type="css-animation"
-                                  data-unfold-animation-in="fadeInRight"
-                                  data-unfold-animation-out="fadeOutRight"
-                                  data-unfold-duration="500">
-                                  <i class="ec ec-user mr-1"></i> Đăng ký <span class="text-gray-50"> hoặc </span> Đăng nhập
+                          <% if account_signed_in? %>
+                            xin chào! &nbsp;
+                            <%= link_to account_path(current_account), class: "text-blue" do %>
+                              <%= current_account.name %>
+                            <% end %>
+                            <%= link_to destroy_account_session_path do %>
+                              <i class="fas fa-sign-out-alt"></i>
+                            <% end %>
+                          <% else %>
+                            <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
+                              <a href="<%= new_account_session_path %>"
+                                role="button"
+                                class="u-header-topbar__nav-link">
+                                <i class="ec ec-user mr-1"></i>
+                                Đăng ký <span class="text-gray-50"> hoặc </span> Đăng nhập
                               </a>
-                              <!-- End Account Sidebar Toggle Button -->
-                          </li>
+                            </li>
+                          <% end %>
                       </ul>
                   </div>
               </div>
@@ -85,21 +58,21 @@
                           <div class="input-group">
                               <input type="email" class="form-control py-2 pl-5 font-size-15 border-right-0 height-40 border-width-2 rounded-left-pill border-primary" name="email" id="searchproduct-item" placeholder="Tìm kiếm sản phẩm" aria-label="Search for Products" aria-describedby="searchProduct1" required>
                               <div class="input-group-append">
-                                  <!-- Select -->
-                                  <select class="js-select selectpicker dropdown-select custom-search-categories-select"
-                                      data-style="btn height-40 text-gray-60 font-weight-normal border-top border-bottom border-left-0 rounded-0 border-primary border-width-2 pl-0 pr-5 py-2">
-                                      <option value="one" selected>Tất cả sản phẩm</option>
-                                      <option value="two">Máy tính & Phụ kiện</option>
-                                      <option value="three">Máy ảnh, âm thanh</option>
-                                      <option value="four">Điện thoại di động</option>
-                                      <option value="four">Máy tính bảng</option>
-                                      <option value="four">Đồng hồ thông minh</option>
-                                      <option value="four">Đồng hồ thời trang</option>
-                                  </select>
-                                  <!-- End Select -->
-                                  <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="button" id="searchProduct1">
-                                      <span class="ec ec-search font-size-24"></span>
-                                  </button>
+                                <!-- Select -->
+                                <!-- select class="js-select selectpicker dropdown-select custom-search-categories-select"
+                                    data-style="btn height-40 text-gray-60 font-weight-normal border-top border-bottom border-left-0 rounded-0 border-primary border-width-2 pl-0 pr-5 py-2">
+                                    <option value="one" selected>Tất cả sản phẩm</option>
+                                    <option value="two">Máy tính & Phụ kiện</option>
+                                    <option value="three">Máy ảnh, âm thanh</option>
+                                    <option value="four">Điện thoại di động</option>
+                                    <option value="four">Máy tính bảng</option>
+                                    <option value="four">Đồng hồ thông minh</option>
+                                    <option value="four">Đồng hồ thời trang</option>
+                                </select> -->
+                                <!-- End Select -->
+                                <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="button" id="searchProduct1">
+                                    <span class="ec ec-search font-size-24"></span>
+                                </button>
                               </div>
                           </div>
                       </form>
@@ -141,14 +114,14 @@
                               </li>
                               <!-- End Search -->
                               <li class="col d-xl-none px-2 px-sm-3"><a href="https://transvelo.github.io/electro-html/2.0/html/shop/my-account.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="My Account"><i class="font-size-22 ec ec-user"></i></a></li>
-                              <li class="col pr-xl-0 px-2 px-sm-3 d-xl-none">
+                              <!-- <li class="col pr-xl-0 px-2 px-sm-3 d-xl-none">
                                   <a href="https://transvelo.github.io/electro-html/2.0/html/shop/cart.html" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
                                       <i class="font-size-22 ec ec-shopping-bag"></i>
                                       <span class="bg-lg-down-black width-22 height-22 bg-primary position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12">2</span>
                                       <span class="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">$1785.00</span>
                                   </a>
-                              </li>
-                              <li class="col pr-xl-0 px-2 px-sm-3 d-none d-xl-block">
+                              </li> -->
+                              <!-- <li class="col pr-xl-0 px-2 px-sm-3 d-none d-xl-block">
                                   <div id="basicDropdownHoverInvoker" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart"
                                       aria-controls="basicDropdownHover"
                                       aria-haspopup="true"
@@ -205,7 +178,7 @@
                                           <a href="https://transvelo.github.io/electro-html/2.0/html/shop/checkout.html" class="btn btn-primary-dark-w ml-md-2 px-5 px-md-4 px-lg-5">Checkout</a>
                                       </div>
                                   </div>
-                              </li>
+                              </li> -->
                           </ul>
                       </div>
                   </div>
@@ -213,80 +186,82 @@
               </div>
           </div>
       </div>
+      <%= render "shared/flash" %>
       <!-- End Logo-Search-header-icons -->
-
-      <!-- Vertical-and-secondary-menu -->
-      <div class="d-none d-xl-block container">
-          <div class="row">
-              <!-- Vertical Menu -->
-              <div class="col-md-auto d-none d-xl-block">
-                  <div class="max-width-270 min-width-270">
-                      <!-- Basics Accordion -->
-                      <div id="basicsAccordion">
-                          <!-- Card -->
-                          <div class="card border-0">
-                              <div class="card-header card-collapse border-0" id="basicsHeadingOne">
-                                  <button type="button" class="btn-link btn-remove-focus btn-block d-flex card-btn py-3 text-lh-1 px-4 shadow-none btn-primary rounded-top-lg border-0 font-weight-bold text-gray-90"
-                                      data-toggle="collapse"
-                                      data-target="#basicsCollapseOne"
-                                      aria-expanded="true"
-                                      aria-controls="basicsCollapseOne">
-                                      <span class="ml-0 text-gray-90 mr-2">
-                                          <span class="fa fa-list-ul"></span>
-                                      </span>
-                                      <span class="pl-1 text-gray-90">Danh mục sản phẩm</span>
-                                  </button>
-                              </div>
-                              <div id="basicsCollapseOne" class="collapse vertical-menu <%= 'show' if controller_name == "homes" %>"
-                                  aria-labelledby="basicsHeadingOne"
-                                  data-parent="#basicsAccordion">
-                                  <div class="card-body p-0">
-                                      <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space hs-menu-initialized">
-                                          <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
-                                              <ul class="navbar-nav u-header__navbar-nav">
-                                                  <% @collections_main&.each do |collection|%>
-                                                    <li class="nav-item u-header__nav-item"
-                                                        data-event="hover"
-                                                        data-position="left">
-                                                        <a class="nav-link u-header__nav-link u-header__nav-link-toggle"
-                                                           href="<%= collection_path(collection) %>" aria-haspopup="true" aria-expanded="false"><%= collection.title %></a>
-                                                    </li>
-                                                  <% end %>
-                                              </ul>
-                                          </div>
-                                      </nav>
-                                  </div>
-                              </div>
-                          </div>
-                          <!-- End Card -->
-                      </div>
-                      <!-- End Basics Accordion -->
-                  </div>
-              </div>
-              <!-- End Vertical Menu -->
-              <!-- Secondary Menu -->
-              <div class="col d-flex justify-content-end">
-                  <!-- Nav -->
-                  <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
-                      <!-- Navigation -->
-                      <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
-                          <ul class="navbar-nav u-header__navbar-nav">
-                              <!-- Button -->
-                              <li class="nav-item u-header__nav-last-item">
-                                  <a class="text-gray-90" href="#" target="_blank">
-                                      <i class="ec ec-transport mr-1"></i> Miễn phí vận chuyển toàn quốc.
-                                  </a>
-                              </li>
-                              <!-- End Button -->
-                          </ul>
-                      </div>
-                      <!-- End Navigation -->
-                  </nav>
-                  <!-- End Nav -->
-              </div>
-              <!-- End Secondary Menu -->
-          </div>
-      </div>
-      <!-- End Vertical-and-secondary-menu -->
+      <% unless ["sessions", "reginstrations", "accounts"].include?(controller_name) %>
+        <!-- Vertical-and-secondary-menu -->
+        <div class="d-none d-xl-block container">
+            <div class="row">
+                <!-- Vertical Menu -->
+                <div class="col-md-auto d-none d-xl-block">
+                    <div class="max-width-270 min-width-270">
+                        <!-- Basics Accordion -->
+                        <div id="basicsAccordion">
+                            <!-- Card -->
+                            <div class="card border-0">
+                                <div class="card-header card-collapse border-0" id="basicsHeadingOne">
+                                    <button type="button" class="btn-link btn-remove-focus btn-block d-flex card-btn py-3 text-lh-1 px-4 shadow-none btn-primary rounded-top-lg border-0 font-weight-bold text-gray-90"
+                                        data-toggle="collapse"
+                                        data-target="#basicsCollapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="basicsCollapseOne">
+                                        <span class="ml-0 text-gray-90 mr-2">
+                                            <span class="fa fa-list-ul"></span>
+                                        </span>
+                                        <span class="pl-1 text-gray-90">Danh mục sản phẩm</span>
+                                    </button>
+                                </div>
+                                <div id="basicsCollapseOne" class="collapse vertical-menu <%= 'show' if controller_name == "homes" %>"
+                                    aria-labelledby="basicsHeadingOne"
+                                    data-parent="#basicsAccordion">
+                                    <div class="card-body p-0">
+                                        <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space hs-menu-initialized">
+                                            <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+                                                <ul class="navbar-nav u-header__navbar-nav">
+                                                    <% @collections_main&.each do |collection|%>
+                                                      <li class="nav-item u-header__nav-item"
+                                                          data-event="hover"
+                                                          data-position="left">
+                                                          <a class="nav-link u-header__nav-link u-header__nav-link-toggle"
+                                                             href="<%= collection_path(collection) %>" aria-haspopup="true" aria-expanded="false"><%= collection.title %></a>
+                                                      </li>
+                                                    <% end %>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Card -->
+                        </div>
+                        <!-- End Basics Accordion -->
+                    </div>
+                </div>
+                <!-- End Vertical Menu -->
+                <!-- Secondary Menu -->
+                <div class="col d-flex justify-content-end">
+                    <!-- Nav -->
+                    <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
+                        <!-- Navigation -->
+                        <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+                            <ul class="navbar-nav u-header__navbar-nav">
+                                <!-- Button -->
+                                <li class="nav-item u-header__nav-last-item">
+                                    <a class="text-gray-90" href="#" target="_blank">
+                                        <i class="ec ec-transport mr-1"></i> Miễn phí vận chuyển toàn quốc.
+                                    </a>
+                                </li>
+                                <!-- End Button -->
+                            </ul>
+                        </div>
+                        <!-- End Navigation -->
+                    </nav>
+                    <!-- End Nav -->
+                </div>
+                <!-- End Secondary Menu -->
+            </div>
+        </div>
+        <!-- End Vertical-and-secondary-menu -->
+      <% end %>
   </div>
 </header>

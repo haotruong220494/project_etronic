@@ -12,12 +12,21 @@ module ProjectEtronic
     config.load_defaults 5.2
 
     config.exceptions_app = self.routes
-    
+
     config.time_zone = "Hanoi"
     config.i18n.load_path += Dir[Rails.root.join("config",
       "locales", "**", "*.{rb,yml}").to_s]
     config.i18n.default_locale = :vi
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
+
+    config.active_job.queue_adapter = :resque
+
+    config.to_prepare do
+      Devise::SessionsController.layout "client"
+      Devise::RegistrationsController.layout "client"
+      Devise::PasswordsController.layout "client"
+      Devise::ConfirmationsController.layout "client"
+    end
   end
 end

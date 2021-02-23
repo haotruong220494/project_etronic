@@ -29,3 +29,20 @@ html {
 p {
   margin-bottom: 0.5rem !important;
 }
+
+.col-offset-md-4-5 {
+  margin-left: 37.5%;
+}
+
+.flash-notice p {
+  margin: 0 !important;;
+  padding: 0 !important;;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+.fa-sign-out-alt {
+  margin-left: 6px;
+}

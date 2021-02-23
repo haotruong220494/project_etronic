@@ -1,0 +1,131 @@
+<%= provide :title, "Cập nhật tài khoản" %>
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, root_path %>
+<%= content_for :breadcum_second, "Tài khoản" %>
+<%= content_for :breadcum_third, "Cập nhật tài khoản" %>
+
+<main id="content" role="main">
+  <!-- breadcrumb -->
+  <div class="bg-gray-13 bg-md-transparent">
+      <div class="container">
+          <!-- breadcrumb -->
+          <div class="my-md-3">
+              <nav aria-label="breadcrumb">
+                  <%= render "layouts/breadcrumb" %>
+              </nav>
+          </div>
+          <!-- End breadcrumb -->
+      </div>
+  </div>
+  <!-- End breadcrumb -->
+
+  <div class="container">
+      <div class="mb-4">
+          <h1 class="text-center">Cập nhật tài khoản</h1>
+      </div>
+      <div class="my-4 my-xl-8">
+          <div class="row">
+              <div class="col-md-5 mb-8 mb-md-0">
+                  <!-- Title -->
+                  <div class="border-bottom border-color-1 mb-6">
+                      <h3 class="d-inline-block section-title mb-0 pb-2 font-size-26"><%= current_account.name %></h3>
+                  </div>
+                  <p class="text-gray-90 mb-4">Chào <%= current_account.name %>, hãy cập nhật thông tin của bạn.</p>
+                  <!-- End Title -->
+                  <%= simple_form_for(current_account, url: account_registration_path(current_account), remote: true) do |f| %>
+                    <div class="modal-body">
+                      <h6 class="title-modal">
+                        <%= t("registrations.edit.text_edit_profile") %>
+                      </h6>
+                      <div class="form-group">
+                        <div class="container-fluid">
+                          <div class="col-md-12 box-name">
+                            <label class="control-label label-required" for="first_name">
+                              <%= t("activerecord.attributes.account.first_name") %>
+                            </label>
+                            <%= f.input :first_name, as: :string,
+                              input_html: { class: "form-control focus-input", value: f.object.first_name, id: "first_name",
+                              placeholder: t("registrations.edit.placeholder_first_name") }, label: false %>
+                          </div>
+                          <div class="col-md-12 box-name">
+                            <label class="control-label label-required" for="last_name">
+                              <%= t("activerecord.attributes.account.last_name") %>
+                            </label>
+                            <%= f.input :last_name, as: :string,
+                              input_html: { class: "form-control", value: f.object.last_name, id: "last_name",
+                              placeholder: t("registrations.edit.placeholder_last_name") }, label: false %>
+                          </div>
+                          <div class="col-md-12">
+                            <label class="control-label label-required" for="email">
+                              <%= t("activerecord.attributes.account.email") %>
+                            </label>
+                            <%= f.input :email, as: :string,
+                              input_html: { class: "form-control", value: f.object.email, id: "email",
+                              placeholder: t("registrations.edit.placeholder_email") }, label: false, readonly: true %>
+                          </div>
+                          <div class="password-block">
+                            <label for="current_password">
+                              <%= t("activerecord.attributes.account.change_password") %>
+                            </label>
+                            <div class="col-md-12">
+                              <%= f.input :current_password,
+                                input_html: { class: "form-control", value: f.object.current_password, id: "current_password",
+                                placeholder: t("registrations.edit.placeholder_current_password"), autocomplete: "new-password" }, label: false,
+                                maxlength: Settings.maxlength.string %>
+                            </div>
+                            <div class="col-md-12">
+                              <%= f.input :password,
+                                input_html: { class: "form-control", value: f.object.password, id: "password",
+                                placeholder: t("registrations.edit.placeholder_password"), autocomplete: "new-password" }, label: false,
+                                maxlength: Settings.maxlength.string %>
+                            </div>
+                            <div class="col-md-12">
+                              <%= f.input :password_confirmation,
+                                input_html: { class: "form-control", value: f.object.password_confirmation, id: "password_confirmation",
+                                placeholder: t("registrations.edit.placeholder_password_confirmation"), autocomplete: "new-password" }, label: false,
+                                maxlength: Settings.maxlength.string %>
+                            </div>
+                          </div>
+                          <% if current_account.admin? %>
+                            <div class="row-bottom">
+                              <label for="parent_category_id">
+                                <%= t("registrations.edit.label_parent_category_id") %>
+                              </label>
+                              <div class="col-md-12">
+                               <%= f.input :parent_category_id, as: :select,
+                                  collection: Category.roots.collect { |p| [ p.name, p.id ] },
+                                  input_html: { class: "form-control" },
+                                  label: false, include_blank: t("registrations.edit.select_choose") %>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group" id="data_category_children" data-children="<%= Category.at_depth(1).to_json(only: [:id, :name, :ancestry]) %>">
+                                  <input type="hidden" id="val-option" value= "<%= f.object.category_id %>">
+                                  <%= f.input :category_id, as: :select,
+                                    collection: Category.at_depth(1).collect {|p| [ p.name, p.id ] },
+                                    input_html: { class: "form-control" },
+                                    label: false, include_blank: t("registrations.edit.select_choose") %>
+                                </div>
+                              </div>
+                            </div>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <%= f.submit t("registrations.edit.button_submit"), class: "next-step confirm-btn btn-confirm-registration text-center" %>
+                      <button type="button" class="cancel-btn" data-dismiss="modal">
+                        <%= t("registrations.edit.button_cancel") %>
+                      </button>
+                    </div>
+                  <% end %>
+              </div>
+              <div class="col-md-1 d-none d-md-block">
+                  <div class="flex-content-center h-100">
+                      <div class="width-1 bg-1 h-100"></div>
+                      <div class="width-50 height-50 border border-color-1 rounded-circle flex-content-center font-italic bg-white position-absolute"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>

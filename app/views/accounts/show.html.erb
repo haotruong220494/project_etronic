@@ -1,0 +1,52 @@
+<%= provide :title, current_account.name %>
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, root_path %>
+<%= content_for :breadcum_second, "Tài khoản" %>
+<%= content_for :breadcum_third, current_account.name %>
+
+<main id="content" role="main">
+  <!-- breadcrumb -->
+  <div class="bg-gray-13 bg-md-transparent">
+      <div class="container">
+          <!-- breadcrumb -->
+          <div class="my-md-3">
+              <%= render "layouts/breadcrumb" %>
+          </div>
+          <!-- End breadcrumb -->
+      </div>
+  </div>
+  <!-- End breadcrumb -->
+  <div class="container">
+      <div class="my-4">
+          <div class="row">
+              <div class="col-md-5 ml-xl-auto mr-md-auto mr-xl-0 mb-8 mb-md-0">
+                  <!-- Title -->
+                  <div class="border-bottom border-color-1 mb-6">
+                      <h3 class="d-inline-block section-title mb-0 pb-2 font-size-26"><%= current_account.name %></h3>
+                  </div>
+                  <p class="text-gray-90 mb-4">Chào <%= current_account.name %>, cảm ơn và mừng bạn trở lại.</p>
+                  <p><i class="far fa-envelope"></i> <%= current_account.email %></p>
+                  <p><i class="fas fa-map-marker-alt"></i> <%= current_account.address %></p>
+                  <p><i class="fas fa-mobile-alt"></i> <%= current_account.phone_number %></p>
+                  <p><i class="fas fa-birthday-cake"></i> <%= current_account.birth_day %></p>
+                  <div class="mb-3 pt-5">
+                    <a href="<%= edit_account_path(current_account) %>" class="btn btn-primary-dark-w px-5">Cập nhật tài khoản</a>
+                  </div>
+              </div>
+              <div class="col-md-1 d-none d-md-block">
+                  <div class="flex-content-center h-100">
+                      <div class="width-1 bg-1 h-100"></div>
+                      <div class="width-50 height-50 border border-color-1 rounded-circle flex-content-center font-italic bg-white position-absolute"></div>
+                  </div>
+              </div>
+              <div class="col-md-5 ml-md-auto ml-xl-0 mr-xl-auto">
+                  <!-- Title -->
+                  <div class="border-bottom border-color-1 mb-6">
+                      <h3 class="d-inline-block section-title mb-0 pb-2 font-size-26">Đơn Hàng</h3>
+                  </div>
+                  <p class="text-gray-90 mb-4">Chức năng đang được hoàn thiện.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
