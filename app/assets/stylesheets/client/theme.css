@@ -3093,7 +3093,7 @@ textarea.form-control {
   padding: 0.67rem 1rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 1.4rem;
+  border-radius: .5rem;
   transition: all 0.2s ease-in-out;
 }
 

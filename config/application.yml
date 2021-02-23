@@ -1,0 +1,5 @@
+EMAIL_DEFAULT_FROM: "haotv03@gmail.com"
+SENDMAIL_USERNAME: "haotv03"
+SENDMAIL_PASSWORD: "hoanganhq12@"
+MAIL_HOST: "localhost:3000"
+SMTP_HOST: "localhost"
