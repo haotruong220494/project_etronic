@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require ./client/jquery.min
+//= require jquery_ujs
+
 //= require ./client/jquery-migrate.min
 //= require ./client/popper.min
 //= require ./client/bootstrap.min

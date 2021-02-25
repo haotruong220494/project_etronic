@@ -1,0 +1,12 @@
+<% if product.reviews.present? %>
+  <% product.reviews.select_parent_review.reverse.each do |review|%>
+    <%= render "reviews/review", review: review %>
+  <% end %>
+<% else %>
+  <div class="text-center">
+    <p>
+      <i class="fas fa-user-edit"></i>
+      <i>Sản phẩm chưa có review nào. hãy là người đầu tiên góp ý cho sản phẩm </i>
+    </p>
+  </div>
+<% end %>

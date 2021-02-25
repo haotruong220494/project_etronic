@@ -1,0 +1,3 @@
+$("#review_product_<%= @review.product_id %>").html("<%= j render 'products/product_review', product: @review.product %>");
+$(".type_review_<%= @review.product_id %>").val("");
+$(".type_review_<%= @review.product_id %>").attr("placeholder", "Viết bình luận....");

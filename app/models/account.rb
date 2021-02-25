@@ -4,6 +4,9 @@ class Account < ApplicationRecord
   devise :database_authenticatable, :registerable, :async,
          :recoverable, :rememberable, :trackable, :confirmable
 
+  enum role: { user: 0, admin: 1 }
+
+  has_many :reviews, dependent: :destroy
   before_save :to_slug
 
   def to_param

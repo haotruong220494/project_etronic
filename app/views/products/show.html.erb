@@ -76,21 +76,15 @@
       </div>
       <!-- Tab Content -->
       <div>
-        <div class="tab-content" id="Jpills-tabContent">
-          <div class="borders-radius-17 border p-4 mt-4 mt-md-0 px-lg-10 py-lg-9">
+        <div class="tab-content">
+          <div class="borders-radius-17 border p-4 mt-4 mt-md-0 px-lg-10 py-lg-5">
             <div class="tab-content" id="Jpills-tabContent">
-              <div class="tab-pane fade active show" id="Jpills-four-example1" role="tabpanel" aria-labelledby="Jpills-four-example1-tab">
-
-                <div class="border-bottom border-color-1 pb-4 mb-4">
-                  <p class="text-gray-90">Fusce vitae nibh mi. Integer posuere, libero et ullamcorper facilisis, enim eros tincidunt orci, eget vestibulum sapien nisi ut leo. Cras finibus vel est ut mollis. Donec luctus condimentum ante et euismod.</p>
-                  <!-- Reviewer -->
-                  <div class="mb-2">
-                    <strong>John Doe</strong>
-                    <span class="font-size-13 text-gray-23">- April 3, 2019</span>
-                  </div>
-                  <!-- End Reviewer -->
-                </div>
+              <div id="review_product_<%= @product.id %>">
+                <%= render "products/product_review", product: @product %>
               </div>
+
+              <%= render "reviews/review_form", { url_action: reviews_path(product_id: @product.id),
+                class_input: "form-control type_review_#{@product.id}", class_parrent_div: "" } %>
             </div>
           </div>
         </div>
