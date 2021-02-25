@@ -1,0 +1,19 @@
+<div class="border-bottom border-color-1 pb-4 <%= class_parrent_div %>" id="sub_review_<%= review.id %>">
+  <p class="text-gray-90"><%= review.body %></p>
+  <!-- Reviewer -->
+  <div class="mb-2">
+    <strong><%= review.account.name %></strong>
+    <span class="font-size-13 text-gray-23">- <%= review.created_at.strftime(Settings.time.formats) %></span>
+    <!-- End Reviewer -->
+    <% if account_signed_in? %>
+      <% if review.account.id == current_account.id || current_account.admin? %>
+        <i class="fas fa-circle fz-2"></i>
+        <%= link_to review_path(review), method: :delete, data: { confirm: "Bạn có chắc chắn muốn xóa?" }, remote: true do %>
+          <%= content_tag :i, "" , class: "far fa-trash-alt text-dark" %> <span class="text-dark">Delete</span>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+
+</div>

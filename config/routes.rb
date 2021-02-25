@@ -41,4 +41,10 @@ Rails.application.routes.draw do
   resources :collections, only: :show, param: :slug
   resources :articles, only: :show, param: :slug
   resources :products, only: [:show, :index], param: :slug
+  resources :reviews, only: [:create, :destroy, :edit] do
+    collection do
+      get :show_subreview
+      post :create_subreview
+    end
+  end
 end

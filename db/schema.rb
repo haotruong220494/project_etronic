@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_085536) do
+ActiveRecord::Schema.define(version: 2021_02_25_042647) do
 
   create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_085536) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.integer "role", default: 0
     t.index ["confirmation_token"], name: "index_accounts_on_confirmation_token", unique: true
     t.index ["email"], name: "index_accounts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
@@ -114,7 +115,6 @@ ActiveRecord::Schema.define(version: 2021_02_23_085536) do
     t.integer "price"
     t.integer "promotional_price"
     t.integer "quantity"
-    t.integer "review_id"
     t.integer "photo_id"
     t.integer "collection_id"
     t.datetime "created_at", null: false
@@ -123,6 +123,15 @@ ActiveRecord::Schema.define(version: 2021_02_23_085536) do
     t.integer "quantity_sold", default: 0
     t.boolean "sale_off", default: false
     t.boolean "especially", default: false
+  end
+
+  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "body"
+    t.integer "review_id"
+    t.integer "product_id", null: false
+    t.integer "account_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

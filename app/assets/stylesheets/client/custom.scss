@@ -46,3 +46,23 @@ p {
 .fa-sign-out-alt {
   margin-left: 6px;
 }
+
+.comment {
+  display: flex;
+  align-items: center;
+  &__avatar {
+    width: 50px;
+    img {
+      width: 50px;
+      border-radius: 50%;
+    }
+  }
+  &__form {
+    flex: 1;
+  }
+}
+
+.fz-2 {
+  font-size: 5px;
+  padding: 0 8px;
+}

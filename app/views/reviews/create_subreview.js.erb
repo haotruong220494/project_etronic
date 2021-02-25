@@ -1,0 +1,12 @@
+<% if @review.errors.any? %>
+  alert("Đã xảy ra lỗi, vui lòng thử lại sau !")
+<% else %>
+  <% if @subreview_parent.present? %>
+    $("#sub_review_<%= @subreview_parent.id %>").after("<%= escape_javascript render 'reviews/subreview', {review: @review, class_parrent_div: 'pl-5 pt-3'} %>");
+  <% else %>
+    $(".sub_review_input_<%= @review_parent.id %>").closest(".comment").before("<%= escape_javascript render 'reviews/subreview', {review: @review, class_parrent_div: 'pl-5 pt-3'} %>");
+  <% end %>
+  $(".sub_review_input_<%= @review_parent.id%>").val("");
+  $(".sub_review_input_<%= @review_parent.id %>").attr("placeholder", "Viết bình luận....");
+<% end %>
+

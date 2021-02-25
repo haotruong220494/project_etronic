@@ -1,0 +1,17 @@
+<% if account_signed_in? %>
+  <div class="comment pt-2 <%= class_parrent_div %>">
+    <div class="comment__avatar">
+      <%= image_tag(asset_path("avatar.jpg")) %>
+    </div>
+    <div class="comment__form">
+      <%= form_for :review, url: url_action, method: :post, remote: true do |f| %>
+        <%= f.text_field :body, class: class_input, placeholder:"Viết bình luận...." %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  Đóng góp ý kiến về sản phẩm để chúng tôi cải thiện và phục vụ bạn được tốt hơn,
+  <%= link_to new_account_session_path, class: "text-blue" do %>
+    đăng nhập
+  <% end %>
+<% end %>
