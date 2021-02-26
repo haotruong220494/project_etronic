@@ -29,6 +29,7 @@ Rails.application.routes.draw do
         post :batch_update_status
       end
     end
+    resources :reviews
   end
 
   devise_for :accounts, path: "", path_names: { sign_in: "login", sign_out: "logout", sign_up: "registration", edit: "account/edit" },
