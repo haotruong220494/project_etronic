@@ -8,7 +8,7 @@ vi:
       send_paranoid_instructions: Nếu email của bạn có trong hệ thống, bạn sẽ nhận được email hướng dẫn xác nhận tài khoản trong một vài phút nữa.
     failure:
       already_authenticated: Bạn đã đăng nhập.
-      inactive: Tài khoản của bạn chưa được kích hoạt.
+      inactive: Vì lý do nào đó tài khoản của bạn đang bị khóa, vui lòng liên hệ quản trị viên để được khôi phục.
       invalid: Tài khoản hoặc mật khẩu không hợp lệ
       last_attempt: Bạn còn một lần thử đăng nhập nữa trước khi tài khoản của bạn bị khóa.
       locked: Tài khoản của bạn đã bị khóa.

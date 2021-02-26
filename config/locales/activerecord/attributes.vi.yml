@@ -19,3 +19,6 @@ vi:
         image: Ảnh đại diện (149*117)
         description: Mô tả bài viết
         status: Trạng thái hiển thị
+      account:
+        role: Phân quyền
+        status: Trạng thái

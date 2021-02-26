@@ -1,0 +1,14 @@
+vi:
+  admin:
+    accounts:
+      account:
+        active: "Đang hoạt động"
+        inactive: "Tài khoản bị khóa"
+        user: "Người dùng"
+        admin: "Quản trị viên"
+      roles:
+        user: "Người dùng"
+        admin: "Quản trị viên"
+      status:
+        active: "Mở khóa tài khoản"
+        inactive: "Khóa tài khoản"
