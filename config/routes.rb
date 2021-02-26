@@ -24,6 +24,11 @@ Rails.application.routes.draw do
         delete :delete_image_attachment
       end
     end
+    resources :accounts, param: :slug do
+      collection do
+        post :batch_update_status
+      end
+    end
   end
 
   devise_for :accounts, path: "", path_names: { sign_in: "login", sign_out: "logout", sign_up: "registration", edit: "account/edit" },

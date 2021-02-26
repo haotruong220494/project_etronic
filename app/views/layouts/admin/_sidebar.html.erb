@@ -67,12 +67,12 @@
         </li>
 
         <li class="nav-item">
-          <%= link_to "", class: "nav-link" do %>
+          <%= link_to admin_accounts_path, class: "nav-link" do %>
             <i class="nav-icon fas fa-users"></i>
             <p>
-              Khách Hàng
+              Quản lý tài khoản
               <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-success right">10<%#= Account.all.size %></span>
+              <span class="badge badge-success right"><%= Account.all.size %></span>
             </p>
           <% end %>
         </li>
