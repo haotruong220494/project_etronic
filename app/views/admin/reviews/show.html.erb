@@ -1,0 +1,48 @@
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, admin_root_path %>
+<%= content_for :breadcum_second, @review.product.collection.title %>
+<%= content_for :breadcum_third, @review.product.name %>
+<%= content_for :sub_breadcum_item, "Bình luận" %>
+
+<%= render "layouts/breadcrumb_admin"%>
+<div class="col-12 pt-3">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title"><i class="fas fa-list"></i>&ensp;
+        Những bình luận trả lời bình luận <b><i><%= @review.body %></i></b></h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0">
+      <table class="table table-hover text-nowrap">
+        <thead>
+          <tr>
+            <th scope="col">Nội dung</th>
+            <th scope="col">Tài khoản</th>
+            <th scope="col">thời gian</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if @subreviews.present? %>
+            <% @subreviews.each do |review| %>
+              <tr>
+                <td style="width: 25%"><%= review.body %></td>
+                <td style="width: 25%"><%= review.account.name %></td>
+                <td style="width: 25%"><%= review.created_at %></td>
+                <td class="action-article" style="width: 10%;">
+                  <%= link_to admin_review_path(id: review.id, product_id: review.product.id), method: :delete, data: { confirm: "Bạn có chắc chắn muốn xóa bình luận này không?" } do %>
+                    <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          <% else %>
+            <tr>
+              <td><i>Hiện chưa có bình luận nào.</i></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 class Admin::ProductsController < Admin::BaseController
   include Response
 
-	before_action :load_product, only: [:edit, :update]
+	before_action :load_product, only: [:show, :edit, :update]
 
   def index
     @q = Product.ransack params[:q]
@@ -20,6 +20,10 @@ class Admin::ProductsController < Admin::BaseController
     else
       render "new"
     end
+  end
+
+  def show
+    @reviews = @product.reviews.select_parent_review
   end
 
   def edit

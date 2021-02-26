@@ -7,4 +7,6 @@ class Review < ApplicationRecord
   validates :body, presence: true
 
   scope :select_parent_review, -> { where(review_id: nil) }
+  scope :select_sub_review, ->(id) { where review_id: id }
+
 end

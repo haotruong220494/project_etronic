@@ -20,6 +20,7 @@ class Admin::AccountsController < Admin::BaseController
   def batch_update_status
     account = Account.find_by(slug: params[:slug])
     account.update_attributes(params_account)
+    flash[:success] = "Cập nhật tài khoản viết công."
     redirect_to admin_accounts_path(page: params[:page])
   end
 
