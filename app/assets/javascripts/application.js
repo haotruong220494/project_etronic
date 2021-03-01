@@ -12,10 +12,10 @@
 //
 //= require ./client/jquery.min
 //= require jquery_ujs
-
 //= require ./client/jquery-migrate.min
 //= require ./client/popper.min
 //= require ./client/bootstrap.min
 //= require_tree ./client/vendor
 //= require ./client/hs.core
 //= require_tree ./client/components
+//= require ./client/collection
