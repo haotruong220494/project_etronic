@@ -9,6 +9,6 @@ class AccountsController < ClientController
 
   private
   def load_account
-    @account = Account.find_by(slug: params[:slug])
+    @account = Account.find_by_id(response_id(params[:slug]))
   end
 end

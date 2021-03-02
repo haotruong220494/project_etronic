@@ -3,3 +3,5 @@ SENDMAIL_USERNAME: "haotv03"
 SENDMAIL_PASSWORD: "hoanganhq12@"
 MAIL_HOST: "localhost:3000"
 SMTP_HOST: "localhost"
+REDIS_URL: "redis://localhost:6379/1" # use by resque
+REDIS_CACHE_URL: "redis://localhost:6379/2" # use by rails cache

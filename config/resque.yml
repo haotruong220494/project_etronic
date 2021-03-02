@@ -1,0 +1,8 @@
+:workers:
+  worker:
+    regression: 2
+:resque_kill_signal: "QUIT"
+:interval: 5
+:resque_log_file: "resque.log"
+:resque_verbose: true
+:resque_pid_path: "tmp/pids"

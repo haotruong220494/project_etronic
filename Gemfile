@@ -13,6 +13,9 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 
+# Redis
+gem "redis-rails"
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -54,6 +57,9 @@ gem "resque"
 
 gem "letter_opener"
 
+gem "resque-status"
+
+gem "resque-web", require: "resque_web"
 # Authenticate social
 gem "omniauth-facebook", "~> 8.0"
 
