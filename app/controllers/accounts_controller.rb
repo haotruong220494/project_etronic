@@ -4,9 +4,6 @@ class AccountsController < ClientController
   def show
   end
 
-  def update
-  end
-
   private
   def load_account
     @account = Account.find_by_id(response_id(params[:slug]))
