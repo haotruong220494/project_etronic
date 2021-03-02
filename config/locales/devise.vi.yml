@@ -61,7 +61,7 @@ vi:
       updated: Đổi mật khẩu thành công! Bạn hiện đang đăng nhập.
       updated_not_active: Mật khẩu của bạn đã được thay đổi thành công.
     registrations:
-      destroyed: Tạm biệt! Tài khoản của bạn đã được xóa. Chúng tôi hy vọng sẽ sớm gặp lại bạn.
+      destroyed: Tài khoản của bạn đã được xóa thành công. Chúng tôi hy vọng bạn sẽ quay trở lại.
       edit:
         are_you_sure: Bạn có chắc?
         cancel_my_account: Xoá tài khoản
