@@ -11,7 +11,7 @@ class Account < ApplicationRecord
   before_save :to_slug
 
   def to_param
-    "#{to_slug}"
+    "#{to_slug}#{id}"
   end
 
   class << self
@@ -34,6 +34,10 @@ class Account < ApplicationRecord
 
   private
   def to_slug
-    self.slug = self.slug.to_s.parameterize
+    if self.slug.present?
+      self.slug = self.name.to_s.parameterize
+    else
+      self.slug = self.slug.to_s.parameterize
+    end
   end
 end
