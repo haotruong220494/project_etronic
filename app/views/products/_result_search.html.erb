@@ -1,0 +1,65 @@
+<%= content_for :breadcum_first, "Trang chủ" %>
+<%= content_for :breadcum_first_link, root_path %>
+<%= content_for :breadcum_second, "Kết quả tìm kiếm từ khóa _#{@search_key}" %>
+<%= provide :title, "Tìm kiếm" %>
+
+<div class="bg-gray-13 bg-md-transparent">
+  <div class="container">
+    <!-- breadcrumb -->
+    <div class="my-md-3">
+      <%= render "layouts/breadcrumb" %>
+    </div>
+    <!-- End breadcrumb -->
+  </div>
+</div>
+  <!-- End breadcrumb -->
+
+<div class="container">
+  <div class="row mb-8">
+    <div class="col-xl-12 col-wd-12gdot5">
+      <% if @products.present? %>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade pt-2 show active" id="pills-two-example1"  data-target-group="groups">
+                <ul class="row list-unstyled products-group no-gutters">
+                  <% @products.each do |product| %>
+                    <li class="col-6 col-md-3 col-wd-2gdot4 product-item">
+                      <div class="product-item__outer h-100">
+                          <div class="product-item__inner px-xl-4 p-3">
+                              <div class="product-item__body pb-xl-2">
+                                  <h5 class="mb-1 product-item__title">
+                                    <%= link_to product.name, product_path(product), class: "text-blue font-weight-bold" %>
+                                  </h5>
+                                  <div class="mb-2">
+                                    <%= link_to product_path(product), class: "d-block text-center" do %>
+                                      <%= image_tag(product.image, class: "img-fluid") %>
+                                    <% end %>
+                                  </div>
+                                  <div class="mb-3">
+
+                                  </div>
+                                  <ul class="font-size-12 p-0 text-gray-110">
+                                    <%= raw product.description.truncate(200) %>
+                                  </ul>
+                                  <div class="flex-center-between mb-1">
+                                    <% if product.promotional_price.present? %>
+                                      <div class="text-red font-size-14"><%= number_with_delimiter(product.promotional_price ) %> vnđ</div>
+                                      <del class="font-size-11 tex-gray-6 bottom-100"><%= number_with_delimiter(product.price ) %> vnđ</del>
+                                    <% else %>
+                                      <div class="text-red font-size-14"><%= number_with_delimiter(product.price ) %> vnđ</div>
+                                    <% end %>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+                  <% end %>
+                </ul>
+            </div>
+        </div>
+        <%= paginate @products, theme: "front" %>
+      <% else %>
+        <p><i>Không tìm thấy sản phẩm nào.</i></p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -56,7 +56,7 @@
                       <form class="js-focus-state">
                           <label class="sr-only" for="searchproduct">Search</label>
                           <div class="input-group">
-                              <input type="email" class="form-control py-2 pl-5 font-size-15 border-right-0 height-40 border-width-2 rounded-left-pill border-primary" name="email" id="searchproduct-item" placeholder="Tìm kiếm sản phẩm" aria-label="Search for Products" aria-describedby="searchProduct1" required>
+                              <input type="text" class="form-control py-2 pl-5 font-size-15 border-right-0 height-40 border-width-2 rounded-left-pill border-primary" id="searchproduct-item" placeholder="Tìm kiếm sản phẩm" aria-label="Search for Products" aria-describedby="search_product" required>
                               <div class="input-group-append">
                                 <!-- Select -->
                                 <!-- select class="js-select selectpicker dropdown-select custom-search-categories-select"
@@ -70,7 +70,7 @@
                                     <option value="four">Đồng hồ thời trang</option>
                                 </select> -->
                                 <!-- End Select -->
-                                <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="button" id="searchProduct1">
+                                <button class="btn btn-primary height-40 py-2 px-3 rounded-right-pill" type="button" id="search_product">
                                     <span class="ec ec-search font-size-24"></span>
                                 </button>
                               </div>
@@ -265,3 +265,19 @@
       <% end %>
   </div>
 </header>
+<script>
+  $("#search_product").on("click", function(){
+    var textSearch = $("#searchproduct-item").val();
+
+    $.ajax({
+      url: "/products",
+      method: "GET",
+      data: {
+        q: {
+          name_cont: textSearch
+        }
+      },
+      dataType: "script"
+    });
+  });
+</script>
