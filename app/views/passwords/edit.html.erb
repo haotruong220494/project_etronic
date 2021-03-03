@@ -1,0 +1,67 @@
+<% provide :title, "Lấy lại mật khẩu" %>
+
+<div class="col-md-3 col-offset-md-3 pt-10 pb-15 col-offset-md-4-5">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: "js-validate",  method: :put }) do |f| %>
+    <%= f.hidden_field :reset_password_token %>
+    <header class="text-center mb-7">
+      <h2 class="h4 mb-0">Lấy lại mật khẩu Bello.</h2>
+      <p>Hãy nhập mật khẩu mới và tiếp tục sử dụng Bello bạn nhé</p>
+    </header>
+
+    <div class="form-group">
+        <div class="js-form-message js-focus-state">
+          <label class="sr-only" for="signinPassword">Mật khẩu</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="signinPasswordLabel">
+                    <span class="fas fa-lock"></span>
+                </span>
+            </div>
+            <%= f.password_field :password, class: "form-control",
+              placeholder: "Mật khẩu",
+              id: "signinPassword",
+              required: true,
+              data: {
+                msg: "Mật khẩu không được để trống. Vui lòng thử lại.",
+                error_class: "u-has-error",
+                success_class: "u-has-success"
+              }
+            %>
+          </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="js-form-message js-focus-state">
+          <label class="sr-only" for="rePassword">Nhập lại mật khẩu</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="signinPasswordLabel">
+                    <span class="fas fa-lock"></span>
+                </span>
+            </div>
+            <%= f.password_field :password_confirmation, class: "form-control",
+              placeholder: "Mật khẩu",
+              id: "rePassword",
+              required: true,
+              data: {
+                msg: "Mật khẩu không được để trống. Vui lòng thử lại.",
+                error_class: "u-has-error",
+                success_class: "u-has-success"
+              }
+            %>
+          </div>
+        </div>
+    </div>
+
+    <div class="mb-2">
+      <button type="submit" class="btn btn-block btn-sm btn-primary transition-3d-hover">Đổi mật khẩu</button>
+    </div>
+
+    <div class="text-center mb-4">
+      <span class="small text-muted">Nếu bạn không muốn đổi mật khẩu của mình.</span>
+      <a class="small text-dark" href="<%= new_account_session_path %>">trở lại đăng nhập
+      </a>
+    </div>
+  <% end %>
+</div>

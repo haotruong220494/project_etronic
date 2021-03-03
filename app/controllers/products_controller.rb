@@ -9,5 +9,6 @@ class ProductsController < ClientController
   def show
     @collections_main = Collection.location("main")
     @product = Product.find_by_id(response_id(params[:slug]))
+    @product_selling =  Product.order(quantity_sold: :desc).order(created_at: :desc).limit(8)
   end
 end
