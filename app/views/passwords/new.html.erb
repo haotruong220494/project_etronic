@@ -1,0 +1,45 @@
+<% provide :title, "Lấy lại mật khẩu" %>
+
+<div class="col-md-3 col-offset-md-3 pt-10 pb-15 col-offset-md-4-5">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: "js-validate",  method: :post }) do |f| %>
+    <header class="text-center mb-7">
+      <h2 class="h4 mb-0">Bạn quên mật khẩu vào Bello?</h2>
+      <p>Sống cả 1 cuộc đời ai mà chẳng có lúc bị quên, đừng quá lo lắng, Bello sẽ giúp bạn lấy lại mật khẩu </p>
+    </header>
+
+    <!-- Form Group -->
+    <div class="form-group">
+        <div class="js-form-message js-focus-state">
+            <label class="sr-only" for="signinEmail">Email</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="signinEmailLabel">
+                        <span class="fas fa-user"></span>
+                    </span>
+                </div>
+                <%= f.text_field :email, autofocus: true, class: "form-control",
+                  placeholder: "Địa chỉ email",
+                  id: "signinEmail",
+                  required: true,
+                  data: {
+                    msg: "Vui lòng nhập một địa chỉ email hợp lệ.",
+                    error_class: "u-has-error",
+                    success_class: "u-has-success"
+                  }
+                %>
+            </div>
+        </div>
+    </div>
+    <!-- End Form Group -->
+
+    <div class="mb-2">
+      <button type="submit" class="btn btn-block btn-sm btn-primary transition-3d-hover">Lấy lại mật khẩu</button>
+    </div>
+
+    <div class="text-center mb-4">
+      <span class="small text-muted">Nếu bạn nhớ mật khẩu của mình.</span>
+      <a class="small text-dark" href="<%= new_account_session_path %>">trở lại đăng nhập
+      </a>
+    </div>
+  <% end %>
+</div>
