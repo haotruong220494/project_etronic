@@ -10,6 +10,7 @@
                                         }
                                         %>")
   $(".sub_review_<%= @current_review.id %>").remove();
+  $(".reply_review_<%= @current_review.id %>").remove();
 <% else %>
   $("#sub_review_<%= @current_review.id %>").append("<%= escape_javascript render 'reviews/review_form',
                                         { url_action: create_subreview_reviews_path(parent_id: @current_review.id),
@@ -17,5 +18,5 @@
                                           class_parrent_div: "pl-5 pt-3"
                                         }
                                         %>")
+  $(".reply_review_<%= @current_review.id %>").remove();
 <% end %>
-

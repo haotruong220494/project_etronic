@@ -1,4 +1,4 @@
-$(document).ready(function ($) { 
+$(document).ready(function ($) {
   $(".change-slug").on("click", function () {
     var t = $(".input-title").val();
     if ("" != t) {
